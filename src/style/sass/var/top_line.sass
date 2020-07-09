@@ -1,0 +1,50 @@
+.header
+	&-wrap
+		margin: 0 auto
+		padding: 0 15px 
+			top: 15px
+		max-width: 1200px
+
+	&-top
+		+flex
+		+justify-content(space-between)
+		+align-items(flex-end)
+
+	&-number
+		font-size: 22px
+		font-weight: 700
+		color: $accent-dark-color
+
+		&:hover
+			text-decoration: underline
+
+	&-buttons
+		+flex
+
+	&-nav
+		margin:
+			top: 30px
+		&-list
+			+flex
+			margin: 0 -5px
+			+justify-content(space-between)
+			list-style-type: none
+
+		&-link
+			margin: 0 5px
+			font-size: 18px
+			font-weight: 400
+			color: $accent-dark-color
+			text-transform: uppercase
+			+prefix(transition, $default-transition)
+
+			&:hover
+				opacity: .5
+
+.header.header-main-page
+	position: absolute
+	top: 0
+	left: 50%
+	width: 100%
+	z-index: 100
+	+prefix(transform, translate(-50%))

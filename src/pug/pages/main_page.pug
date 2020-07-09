@@ -1,0 +1,128 @@
+include ../var/top_line-main-page.pug
+
+.header-slider.owl-carousel
+	.header-slider-elem
+		img(src="style/img/main-slider-img.jpg", alt="").header-slider-img
+	.header-slider-elem
+		img(src="style/img/main-slider-img.jpg", alt="").header-slider-img
+	.header-slider-elem
+		img(src="style/img/main-slider-img.jpg", alt="").header-slider-img
+
+.wrapper
+	.video-wrap
+		button(onclick="play_pause()").video-prev
+			.video-text Designwear
+			.video-play-btn
+		video(width="100" controls).video#video
+			source(src="style/img/postmalone.mp4")
+
+	.main-category
+		a(href="").main-category-wrap
+			.main-category-elem.main-category-img-box
+				img(src="style/img/main-page-link/main-link-1.jpg", alt="").main-category-img
+			.main-category-elem.main-category-text
+				.main-category-name Комоды, тв-тумбы
+				.main-category-desc Тумбочки и бельевые комоды
+
+		a(href="").main-category-wrap.main-category-wrap-rev
+			.main-category-elem.main-category-img-box
+				img(src="style/img/main-page-link/main-link-2.jpg", alt="").main-category-img
+			.main-category-elem.main-category-text
+				.main-category-name Витрины и буфеты
+				.main-category-desc Тумбочки и бельевые комоды
+		
+		a(href="").main-category-wrap
+			.main-category-elem.main-category-img-box
+				img(src="style/img/main-page-link/main-link-3.jpg", alt="").main-category-img
+			.main-category-elem.main-category-text
+				.main-category-name Мебель в спальню
+				.main-category-desc Тумбочки и бельевые комоды
+		
+		a(href="").main-category-wrap.main-category-wrap-rev
+			.main-category-elem.main-category-img-box
+				img(src="style/img/main-page-link/main-link-4.jpg", alt="").main-category-img
+			.main-category-elem.main-category-text
+				.main-category-name Шкафы
+				.main-category-desc Платьяные шкафы
+		
+		a(href="").main-category-wrap
+			.main-category-elem.main-category-img-box
+				img(src="style/img/main-page-link/main-link-5.jpg", alt="").main-category-img
+			.main-category-elem.main-category-text
+				.main-category-name Консоли и столы
+				.main-category-desc Тумбочки и бельевые комоды
+		
+		a(href="").main-category-wrap.main-category-wrap-rev
+			.main-category-elem.main-category-img-box
+				img(src="style/img/main-page-link/main-link-6.jpg", alt="").main-category-img
+			.main-category-elem.main-category-text
+				.main-category-name Мебель в ванную
+				.main-category-desc Тумбочки и бельевые комоды
+		
+		a(href="").main-category-wrap
+			.main-category-elem.main-category-img-box
+				img(src="style/img/main-page-link/main-link-7.jpg", alt="").main-category-img
+			.main-category-elem.main-category-text
+				.main-category-name Зеркала
+				.main-category-desc Тумбочки и бельевые комоды
+	
+	.main-collection
+		.catalog-wrap
+			a(href="").catalog-elem
+				img(src="style/img/collection/collection-img-1.jpg", alt="").catalog-img
+				.catalog-info
+					.catalog-name Aura
+					.catalog-btn
+						img(src="style/img/icon/arrow-link-right.svg", alt="").catalog-btn-img
+
+			a(href="").catalog-elem
+				img(src="style/img/collection/collection-img-2.jpg", alt="").catalog-img
+				.catalog-info
+					.catalog-name Aura
+					.catalog-btn
+						img(src="style/img/icon/arrow-link-right.svg", alt="").catalog-btn-img
+
+			a(href="").catalog-elem
+				img(src="style/img/collection/collection-img-3.jpg", alt="").catalog-img
+				.catalog-info
+					.catalog-name Aura
+					.catalog-btn
+						img(src="style/img/icon/arrow-link-right.svg", alt="").catalog-btn-img
+
+			a(href="").catalog-elem
+				img(src="style/img/collection/collection-img-4.jpg", alt="").catalog-img
+				.catalog-info
+					.catalog-name Aura
+					.catalog-btn
+						img(src="style/img/icon/arrow-link-right.svg", alt="").catalog-btn-img
+
+		a(href="").catalog-all Все коллекции
+
+a(href="").inst
+	.inst-wrap
+		.inst-title
+			.inst-logo
+				img(src="style/img/icon/inst-icon.svg", alt="")
+			.inst-text Ambicioni
+		.inst-list
+			.inst-list-elem
+				img(src="style/img/instagram/inst-img-1.jpg", alt="").inst-list-img
+			.inst-list-elem
+				img(src="style/img/instagram/inst-img-2.jpg", alt="").inst-list-img
+			.inst-list-elem
+				img(src="style/img/instagram/inst-img-3.jpg", alt="").inst-list-img
+			.inst-list-elem
+				img(src="style/img/instagram/inst-img-4.jpg", alt="").inst-list-img
+
+script. 
+	video = document.getElementById('video');
+	play_pause_status = "play";
+	video.controls = false; 
+
+	function play_pause() {
+		video.play();
+		play_pause_status = "play";
+		$('.video-prev').fadeOut();
+		video.controls = true; 
+		console.log('hi');
+	}

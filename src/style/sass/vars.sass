@@ -1,0 +1,349 @@
+$accent-dark-color: #191917
+$white: #ffffff
+$font-light-color: #A8A8A8
+
+$bg-color-light: #F5F7F8
+
+$adobe-font: "Adobe Clean", sans-serif
+$montserrat-font: "Montserrat", sans-serif
+$PlayfairDisplaySC-font: "PlayfairDisplaySC", serif
+$PTSerifCaption-font: "PTSerifCaption", serif
+$default-transition: .35s
+$default-opacity: .8
+
+*, body, html 
+	margin: 0
+	padding: 0
+	font-family: $adobe-font
+	box-sizing: border-box
+
+html, body
+	min-width: 320px
+	font-weight: 400
+	font-style: normal
+	color: $accent-dark-color
+	background-color: $white
+
+html
+	height: 100%
+	scroll-behavior: smooth
+
+body 
+	position: relative
+	height: auto
+	// overflow: hidden
+
+	&.menu-active
+		overflow: hidden
+
+button,
+input,
+textarea,
+select
+	outline: none
+	border-radius: 0
+	-moz-appearance: none
+  -webkit-appearance: none
+  +prefix(appearance, none)
+
+a
+	text-decoration: none
+
+.header-slider
+	position: relative
+	width: 100%
+	height: 100vh
+	overflow: hidden
+
+	&-elem
+		position: relative
+		width: 100%
+		height: 100%
+
+	&-img
+		width: 100% 
+		height: 100%
+		object-fit: scale-down
+
+	.owl-nav
+		position: absolute
+		left: 50%
+		bottom: 30px
+		width: 100%
+		max-width: 314px
+		height: 24px
+		+prefix(transform, translate(-50%))
+
+		button.owl-prev,
+		button.owl-next
+			position: absolute
+			width: 13px
+			height: 24px
+			top: 0
+			font-size: 0
+
+		button.owl-prev
+			left: 0
+			background-image: url(../img/icon/arrow-slider-left.svg)
+		
+		button.owl-next
+			right: 0
+			background-image: url(../img/icon/arrow-slider-right.svg)
+
+	.owl-dots
+		position: absolute
+		bottom: 30px
+		left: 50%
+		+prefix(transform, translate(-50%))
+
+	button.owl-dot
+		position: relative
+		margin:
+			right: 28px
+			left: 15px
+		width: 15px
+		height: 15px
+		background-color: transparent
+		border: 2px solid rgba(255, 255, 255, .5)
+		border-radius: 15px
+		+prefix(transition, $default-transition)
+
+		&:first-child
+			margin:
+				left: 0
+
+		&:last-child
+			margin:
+				right: 0
+			&::after
+				display: none
+
+		&::after
+			content: ''
+			display: block
+			position: absolute
+			width: 13px
+			height: 1px
+			right: -30px
+			background-color: rgba(255, 255, 255, .5)
+
+	button.owl-dot.active
+		border-color: transparent
+		background-color: rgba(255, 255, 255, .5)
+
+.wrapper
+	margin: 0 auto
+	margin:
+		bottom: 100px
+	padding: 0 15px
+	width: 100%
+	max-width: 1200px
+
+.video-wrap
+	position: relative
+	margin: 0 
+		top: 130px
+	max-height: 658px
+	padding: 0
+
+.video
+	position: relative
+	margin: 0
+	padding: 0
+	width: 100%
+	height: auto
+	outline: none
+	overflow: hidden
+	z-index: 5
+
+	&-prev
+		+flex
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		width: 100% 
+		height: 100%
+		border: 0
+		background-color: rgba(25, 25, 23, 0.3)
+		+flex-flow(column)
+		+align-items(center)
+		+justify-content(center)
+		z-index: 10
+		cursor: pointer
+		
+	&-text
+		font-family: $PlayfairDisplaySC-font
+		font-size: 50px
+		color: $white
+		text-transform: uppercase
+	
+	&-play-btn
+		margin:
+			top: 35px
+		width: 64px
+		height: 64px
+		background-color: transparent
+		background-image: url(../img/icon/play-icon.svg)
+		background-position: center center
+		background-size: cover
+		background-repeat: no-repeat
+		+prefix(transition, $default-transition)
+
+		&:hover
+			+prefix(transform, scale(1.1))
+
+.catalog
+
+	&-wrap
+		+flex
+		+justify-content(space-between)
+		+flex-wrap(wrap)
+
+	&-elem
+		position: relative
+		margin:
+			bottom: 30px
+		padding:
+			bottom: 35.1%
+		width: 48.8%
+		overflow: hidden
+
+		&:hover
+			.catalog-btn
+				&::after
+					width: 100%
+
+	&-img
+		display: block
+		position: absolute
+		margin: auto
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		width: 100%
+		max-width: 100%
+		height: 100%
+		max-height: 100%
+
+	&-info
+		position: absolute
+		bottom: 15px
+		left: 0
+		width: 100%
+		height: 70px
+
+	&-name
+		position: relative
+		padding: 20px 45px
+		font-size: 30px
+		color: $white
+		text-transform: uppercase
+		text-align: center
+		z-index: 1
+	
+	&-btn
+		position: absolute
+		padding: 20px 25px
+		top: 0
+		right: 0
+		width: 100%
+		height: 100%
+
+		&::after
+			content: ''
+			display: block
+			position: absolute
+			top: 0
+			right: 0
+			width: 70px
+			height: 100%
+			background-color: rgba(25, 25, 23, .5)
+			+prefix(transition, $default-transition)
+			z-index: 0
+
+		&-img
+			position: relative
+			float: right
+			z-index: 1
+	
+	&-all
+		display: block
+		margin: 0 auto
+			top: 10px
+		padding: 12px
+			bottom: 10px
+		width: 100% 
+		max-width: 300px
+		font-size: 22px
+		font-weight: 700
+		color: $accent-dark-color
+		border: 1px solid $accent-dark-color
+		text-align: center
+		+prefix(transition, $default-transition)
+
+		&:hover
+			color: $white
+			background-color: $accent-dark-color
+
+.inst
+	display: block
+	padding: 60px 15px
+	background-color: $accent-dark-color
+
+	&-wrap
+		+flex
+		margin: 0 auto
+		max-width: 1170px
+
+	&-title
+		+flex
+		+align-items(center)
+
+	&-text
+		position: relative
+		margin:
+			left: 25px
+		font-size: 40px
+		color: $white
+
+		&:after
+			content: 'В инстаграмме'
+			position: absolute
+			bottom: -10px
+			left: 0
+			font-size: 13px
+			color: #a7a7a7
+			text-transform: uppercase
+
+	&-list
+		+flex
+		margin:
+			left: 60px
+		width: 100%
+		max-width: 860px
+		+justify-content(space-between)
+
+		&-elem
+			position: relative
+			padding:
+				bottom: 23.3%
+			width: 23.3%
+
+		&-img
+			display: block
+			position: absolute
+			margin: auto
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			width: 100%
+			max-width: 100%
+			height: 100%
+			max-height: 100%
+
+
+
