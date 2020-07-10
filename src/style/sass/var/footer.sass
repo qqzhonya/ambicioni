@@ -1,0 +1,86 @@
+.footer
+	display: block
+	margin:
+		top: auto
+	-webkit-box-flex: 0
+	-ms-flex: 0 0 auto
+	flex: 0 0 auto
+
+	&-wrap
+		+flex
+		margin: 0 auto
+		padding: 40px 15px
+		width: 100%
+		max-width: 1200px
+	
+	&-left
+		+flex
+		margin:
+			right: 50px
+		+flex-flow(column)
+	
+	&-logo
+		max-width: 150px
+
+		img
+			width: 100%
+	
+	&-phone
+		margin:
+			top: 15px
+		font-size: 15px
+		line-height: 18px
+		font-weight: 700
+		color: $accent-dark-color
+	
+	&-copyright
+		margin:
+			top: 15px
+		font-size: 10px
+
+	&-right
+		width: 100%
+
+	&-top,
+	&-bottom
+		+flex
+		+justify-content(space-between)
+	
+	&-bottom
+		margin:
+			top: 25px
+		
+	&-elem
+		margin:
+			right: 17px
+		min-width: 126px
+
+		&:last-child
+			margin:
+				right: 0
+
+	&-heading
+		font-size: 15px
+		color: $accent-dark-color
+		text-transform: uppercase
+
+	a.footer-heading 
+		&:hover
+			text-decoration: underline
+
+	&-list
+		margin:
+			top: 10px
+		list-style-type: none
+
+		li
+			margin:
+				bottom: 4px
+
+	&-link
+		font-size: 13px
+		line-height: 16px
+		color: $accent-dark-color
+
+		&:hover
+			text-decoration: underline

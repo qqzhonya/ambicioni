@@ -19,20 +19,20 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="#F6CB52">
   </head>
   <body>
-    <header class="header header-main-page">
+    <header class="header">
       <div class="header-wrap">
         <div class="header-top"><a class="header-number" href="tel:+79697775683">+ 7 969 777 5683</a>
-          <div class="header-logo"><img src="style/img/icon/logo.svg" alt=""></div>
+          <div class="header-logo"><img src="style/img/icon/logo-wht.svg" alt=""></div>
           <div class="header-buttons">
             <div class="header-search">
-              <div class="header-search-btn"><img src="style/img/icon/search-icon.svg" alt=""></div>
+              <div class="header-search-btn"><img src="style/img/icon/search-wht-icon.svg" alt=""></div>
               <form class="header-search-form" action="">
                 <input class="header-search-input" type="text" placeholder="Поиск">
                 <div class="header-search-close"><img src="style/img/icon/cross-icon.svg" alt=""></div>
               </form>
             </div>
             <div class="header-cart">
-              <div class="header-cart-btn"><img src="style/img/icon/cart-icon.svg" alt="">
+              <div class="header-cart-btn"><img src="style/img/icon/cart-wht-icon.svg" alt="">
                 <div class="header-cart-val">2</div>
               </div>
             </div>
@@ -83,90 +83,32 @@
         </div>
       </div>
     </header>
-    <div class="header-slider owl-carousel">
-      <div class="header-slider-elem"><img class="header-slider-img" src="style/img/main-slider-img.jpg" alt=""></div>
-      <div class="header-slider-elem"><img class="header-slider-img" src="style/img/main-slider-img.jpg" alt=""></div>
-      <div class="header-slider-elem"><img class="header-slider-img" src="style/img/main-slider-img.jpg" alt=""></div>
-    </div>
     <div class="wrapper-box">
       <div class="wrapper">
-        <div class="video-wrap">
-          <button class="video-prev" onclick="play_pause()">
-            <div class="video-text">Designwear</div>
-            <div class="video-play-btn"></div>
-          </button>
-          <video class="video" width="100" controls id="video">
-            <source src="style/img/postmalone.mp4">
-          </video>
+        <div class="wrapper-header">Консоли и столы</div>
+        <div class="price-filter">
+          <form class="price-filter-form" action="">
+            <div class="price-filter-elem price-filter-input-wrap">
+              <div class="price-filter-title">Цена:</div>
+              <label class="price-filter-label" for="#input-from"><span class="price-filter-input-title">От:</span>
+                <input class="price-filter-input" type="text" value="1600" id="input-from">
+              </label>
+              <label class="price-filter-label" for="#input-to"><span class="price-filter-input-title">До:</span>
+                <input class="price-filter-input" type="text" value="120000" id="input-to">
+              </label>
+            </div>
+            <div class="price-filter-elem">
+              <div class="price-filter-slider" id="priceSlider"></div>
+              <div class="price-filter-slider-min" id="priceSlider-min"></div>
+              <div class="price-filter-slider-max" id="priceSlider-max"></div>
+            </div>
+            <div class="price-filter-elem price-filter-buttons">
+              <div class="price-filter-btn default-btn"><span class="price-filter-btn-text">Найти </span><span class="price-filter-btn-value">(16)</span></div>
+              <div class="price-filter-clear"></div>
+            </div>
+          </form>
         </div>
-        <div class="main-category"><a class="main-category-wrap" href="">
-            <div class="main-category-elem main-category-img-box"><img class="main-category-img" src="style/img/main-page-link/main-link-1.jpg" alt=""></div>
-            <div class="main-category-elem main-category-text">
-              <div class="main-category-name">Комоды, тв-тумбы</div>
-              <div class="main-category-desc">Тумбочки и бельевые комоды</div>
-            </div></a><a class="main-category-wrap main-category-wrap-rev" href="">
-            <div class="main-category-elem main-category-img-box"><img class="main-category-img" src="style/img/main-page-link/main-link-2.jpg" alt=""></div>
-            <div class="main-category-elem main-category-text">
-              <div class="main-category-name">Витрины и буфеты</div>
-              <div class="main-category-desc">Тумбочки и бельевые комоды</div>
-            </div></a><a class="main-category-wrap" href="">
-            <div class="main-category-elem main-category-img-box"><img class="main-category-img" src="style/img/main-page-link/main-link-3.jpg" alt=""></div>
-            <div class="main-category-elem main-category-text">
-              <div class="main-category-name">Мебель в спальню</div>
-              <div class="main-category-desc">Тумбочки и бельевые комоды</div>
-            </div></a><a class="main-category-wrap main-category-wrap-rev" href="">
-            <div class="main-category-elem main-category-img-box"><img class="main-category-img" src="style/img/main-page-link/main-link-4.jpg" alt=""></div>
-            <div class="main-category-elem main-category-text">
-              <div class="main-category-name">Шкафы</div>
-              <div class="main-category-desc">Платьяные шкафы</div>
-            </div></a><a class="main-category-wrap" href="">
-            <div class="main-category-elem main-category-img-box"><img class="main-category-img" src="style/img/main-page-link/main-link-5.jpg" alt=""></div>
-            <div class="main-category-elem main-category-text">
-              <div class="main-category-name">Консоли и столы</div>
-              <div class="main-category-desc">Тумбочки и бельевые комоды</div>
-            </div></a><a class="main-category-wrap main-category-wrap-rev" href="">
-            <div class="main-category-elem main-category-img-box"><img class="main-category-img" src="style/img/main-page-link/main-link-6.jpg" alt=""></div>
-            <div class="main-category-elem main-category-text">
-              <div class="main-category-name">Мебель в ванную</div>
-              <div class="main-category-desc">Тумбочки и бельевые комоды</div>
-            </div></a><a class="main-category-wrap" href="">
-            <div class="main-category-elem main-category-img-box"><img class="main-category-img" src="style/img/main-page-link/main-link-7.jpg" alt=""></div>
-            <div class="main-category-elem main-category-text">
-              <div class="main-category-name">Зеркала</div>
-              <div class="main-category-desc">Тумбочки и бельевые комоды</div>
-            </div></a></div>
-        <div class="main-collection">
-          <div class="catalog-wrap"><a class="catalog-elem" href=""><img class="catalog-img" src="style/img/collection/collection-img-1.jpg" alt="">
-              <div class="catalog-info">
-                <div class="catalog-name">Aura</div>
-                <div class="catalog-btn"><img class="catalog-btn-img" src="style/img/icon/arrow-link-right.svg" alt=""></div>
-              </div></a><a class="catalog-elem" href=""><img class="catalog-img" src="style/img/collection/collection-img-2.jpg" alt="">
-              <div class="catalog-info">
-                <div class="catalog-name">Bairo</div>
-                <div class="catalog-btn"><img class="catalog-btn-img" src="style/img/icon/arrow-link-right.svg" alt=""></div>
-              </div></a><a class="catalog-elem" href=""><img class="catalog-img" src="style/img/collection/collection-img-3.jpg" alt="">
-              <div class="catalog-info">
-                <div class="catalog-name">Bernetto</div>
-                <div class="catalog-btn"><img class="catalog-btn-img" src="style/img/icon/arrow-link-right.svg" alt=""></div>
-              </div></a><a class="catalog-elem" href=""><img class="catalog-img" src="style/img/collection/collection-img-4.jpg" alt="">
-              <div class="catalog-info">
-                <div class="catalog-name">Fornetti</div>
-                <div class="catalog-btn"><img class="catalog-btn-img" src="style/img/icon/arrow-link-right.svg" alt=""></div>
-              </div></a></div><a class="catalog-all" href="">Все коллекции</a>
-        </div>
-      </div><a class="inst" href="">
-        <div class="inst-wrap">
-          <div class="inst-title">
-            <div class="inst-logo"><img src="style/img/icon/inst-icon.svg" alt=""></div>
-            <div class="inst-text">Ambicioni</div>
-          </div>
-          <div class="inst-list">
-            <div class="inst-list-elem"><img class="inst-list-img" src="style/img/instagram/inst-img-1.jpg" alt=""></div>
-            <div class="inst-list-elem"><img class="inst-list-img" src="style/img/instagram/inst-img-2.jpg" alt=""></div>
-            <div class="inst-list-elem"><img class="inst-list-img" src="style/img/instagram/inst-img-3.jpg" alt=""></div>
-            <div class="inst-list-elem"><img class="inst-list-img" src="style/img/instagram/inst-img-4.jpg" alt=""></div>
-          </div>
-        </div></a>
+      </div>
       <footer class="footer">
         <div class="footer-wrap"> 
           <div class="footer-left"><a class="footer-logo" href=""><img src="style/img/icon/logo.svg" alt=""></a><a class="footer-phone" href="tel:+79697775683">+ 7 969 777 5683</a><span class="footer-copyright">© 2020/Все права защищены</span></div>
@@ -233,19 +175,6 @@
         </div>
       </footer>
     </div>
-    <script>
-      video = document.getElementById('video');
-      play_pause_status = "play";
-      video.controls = false; 
-      
-      function play_pause() {
-      	video.play();
-      	play_pause_status = "play";
-      	$('.video-prev').fadeOut();
-      	video.controls = true; 
-      	console.log('hi');
-      }
-    </script>
     <script src="./style/js/plugin/jquery-3.4.1.min.js"></script>
     <script src="./style/js/plugin/jquery-ui.min.js"></script>
     <script src="./style/js/plugin/owl.carousel.min.js"></script>

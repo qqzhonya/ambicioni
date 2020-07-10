@@ -8,6 +8,11 @@
 			margin:
 				bottom: 100px
 
+			&:hover
+				.main-category-name
+					&::after
+						width: 100%
+
 		&-img-box
 			position: relative
 			padding:
@@ -34,9 +39,22 @@
 			color: $accent-dark-color
 
 		&-name
+			display: inline-block
+			position: relative
 			font-size: 30px
 			font-weight: 700
 			text-transform: uppercase
+
+			&::after
+				content: ''
+				display: block
+				position: absolute
+				bottom: 0
+				left: 0
+				width: 0
+				height: 2px
+				background-color: $accent-dark-color
+				+prefix(transition, $default-transition)
 		
 		&-desc
 			margin:

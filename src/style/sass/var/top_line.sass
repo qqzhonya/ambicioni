@@ -1,25 +1,101 @@
 .header
+	background-color: $accent-dark-color
+
 	&-wrap
+		position: relative
 		margin: 0 auto
 		padding: 0 15px 
 			top: 15px
+			bottom: 30px
 		max-width: 1200px
 
 	&-top
 		+flex
+		height: 93px
 		+justify-content(space-between)
 		+align-items(flex-end)
+
+	&-logo
+		position: absolute
+		top: 15px
+		left: 50%
+		+prefix(transform, translate(-50%))
 
 	&-number
 		font-size: 22px
 		font-weight: 700
-		color: $accent-dark-color
+		color: $white
 
 		&:hover
 			text-decoration: underline
 
 	&-buttons
 		+flex
+
+	&-search-btn,
+	&-cart-btn
+		cursor: pointer 
+
+		&:hover
+			opacity: $default-opacity
+
+	&-search
+		+flex
+		+align-items(center)
+
+		&-form
+			display: none
+			position: relative
+			margin:
+				left: 15px
+
+		&-input
+			padding:
+				bottom: 3px
+				right: 20px
+			min-width: 300px
+			font-size: 18px
+			line-height: 22px
+			color: $white
+			background-color: transparent
+			border: 0
+				bottom: 1px solid $white
+
+			+placeholder()
+				color: #A8A8A8
+		
+		&-close
+			position: absolute
+			bottom: 10px
+			right: 0
+			width: 13px
+			height: 13px
+			cursor: pointer
+
+			img
+				width: 100%
+
+			&:hover
+				opacity: $default-opacity
+
+	&-cart
+		position: relative
+		margin:
+			left: 35px
+		
+		&-val
+			position: absolute
+			top: -10px
+			right: -10px
+			width: 22px
+			height: 22px
+			font-size: 14px
+			font-weight: 700
+			line-height: 25px
+			color: $white
+			border-radius: 50px
+			background-color: #F65251
+			text-align: center
 
 	&-nav
 		margin:
@@ -30,16 +106,65 @@
 			+justify-content(space-between)
 			list-style-type: none
 
+			li
+				position: relative
+
 		&-link
 			margin: 0 5px
 			font-size: 18px
 			font-weight: 400
-			color: $accent-dark-color
+			color: $white
 			text-transform: uppercase
-			+prefix(transition, $default-transition)
+			cursor: pointer
 
 			&:hover
-				opacity: .5
+				.header-nav-link-text 
+					opacity: .5
+
+		&-about
+			&:hover
+				.header-nav-dropdown-wrap
+					display: block
+
+		&-dropdown-wrap
+			display: none
+			position: absolute
+			padding-top: 36px
+			left: -10px
+			top: 0
+
+		&-dropdown
+			position: relative
+			padding: 25px 30px
+			width: 210px
+			background-color: $accent-dark-color
+
+			&::before
+				content: ''
+				display: block
+				position: absolute
+				top: -7px
+				left: 35px
+				width: 14px
+				height: 14px
+				background-color: $accent-dark-color
+				+prefix(transform, rotate(45deg))
+
+			&-link
+				display: block
+				margin:
+					bottom: 17px
+				font-size: 18px
+				line-height: 22px
+				color: $white
+				text-transform: uppercase
+
+				&:last-child
+					margin:
+						bottom: 0
+
+				&:hover
+					text-decoration: underline
 
 .header.header-main-page
 	position: absolute
@@ -47,4 +172,18 @@
 	left: 50%
 	width: 100%
 	z-index: 100
+	background-color: transparent
 	+prefix(transform, translate(-50%))
+
+	.header-number
+		color: $accent-dark-color
+
+	.header-search
+		&-input
+			color: $accent-dark-color
+			background-color: $white
+			border-color: $accent-dark-color
+
+	.header-nav
+		&-link
+			color: $accent-dark-color

@@ -3,30 +3,73 @@ header.header
 		.header-top
 			a(href="tel:+79697775683").header-number + 7 969 777 5683
 			.header-logo
-				img(src="style/img/icon/logo.svg", alt="")
+				img(src="style/img/icon/logo-wht.svg", alt="")
 			.header-buttons
 				.header-search
 					.header-search-btn
-						img(src="style/img/icon/search-icon.svg", alt="")
+						img(src="style/img/icon/search-wht-icon.svg", alt="")
+					form(action="").header-search-form
+						input(type="text" placeholder="Поиск").header-search-input
+						.header-search-close
+							img(src="style/img/icon/cross-icon.svg", alt="")
 				.header-cart
 					.header-cart-btn
-						img(src="style/img/icon/cart-icon.svg", alt="")
+						img(src="style/img/icon/cart-wht-icon.svg", alt="")
+						.header-cart-val 2
 		.header-bottom
 			nav.header-nav
 				ul.header-nav-list
 					li
-						a(href="").header-nav-link Каталог
+						a(href="").header-nav-link 
+							span.header-nav-link-text Каталог
 					li
-						a(href="").header-nav-link Коллекции
+						a(href="").header-nav-link 
+							span.header-nav-link-text Коллекции
 					li
-						a(href="").header-nav-link Индивидуальные заказы
+						a(href="").header-nav-link 
+							span.header-nav-link-text Индивидуальные заказы
 					li
-						a(href="").header-nav-link О нас
+						.header-nav-link.header-nav-about 
+							span.header-nav-link-text О нас
+							.header-nav-dropdown-wrap
+								.header-nav-dropdown
+									a(href="").header-nav-dropdown-link О нас
+									a(href="").header-nav-dropdown-link Видео о нас
+									a(href="").header-nav-dropdown-link Фото шоурума
+									a(href="").header-nav-dropdown-link Видео шоурума
+									a(href="").header-nav-dropdown-link Портфолио
 					li
-						a(href="").header-nav-link Как выбрать мебель
+						a(href="").header-nav-link 
+							span.header-nav-link-text Как выбрать мебель
 					li
-						a(href="").header-nav-link Сотрудничество
+						a(href="").header-nav-link 
+							span.header-nav-link-text Сотрудничество
 					li
-						a(href="").header-nav-link Доставка и оплата
+						a(href="").header-nav-link 
+							span.header-nav-link-text Доставка и оплата
 					li
-						a(href="").header-nav-link Контакты
+						a(href="").header-nav-link 
+							span.header-nav-link-text Контакты
+					
+		.modal-cart
+			.modal-cart-close
+			.modal-cart-elem
+				.modal-cart-delete
+				.modal-cart-img-box
+					img(src="style/img/cart-modal-img.jpg", alt="").modal-cart-img
+				.modal-cart-info
+					a(href="").modal-cart-info-name Обувной шкаф Contorno
+					.modal-cart-info-size 80х35х87.5 см
+					.modal-cart-info-price 57800 ₽
+			.modal-cart-elem
+				.modal-cart-delete
+				.modal-cart-img-box
+					img(src="style/img/cart-modal-img.jpg", alt="").modal-cart-img
+				.modal-cart-info
+					a(href="").modal-cart-info-name Обувной шкаф Contorno
+					.modal-cart-info-size 80х35х87.5 см
+					.modal-cart-info-price 57800 ₽
+			.modal-cart-all-price
+				.modal-cart-all-price-text Итого:
+				.modal-cart-all-price-value 57800 ₽
+			a(href="").default-btn.modal-cart-btn Оформить заказ
