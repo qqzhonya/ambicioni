@@ -1,31 +1,16 @@
-include ../var/top_line.pug
+include ../var/top_line-absolute.pug
+
+.header-slider
+	.header-slider-elem
+		img(src="style/img/main-slider-img-2.jpg", alt="").header-slider-img
+	.header-slider-elem
+		img(src="style/img/main-slider-img.jpg", alt="").header-slider-img
+	.header-slider-elem
+		img(src="style/img/main-slider-img-2.jpg", alt="").header-slider-img
 
 .wrapper-box
 	.wrapper
-		.wrapper-header Консоли и столы
-
-		.price-filter
-			form(action="").price-filter-form
-				
-				.price-filter-elem.price-filter-input-wrap
-					.price-filter-title Цена:
-					label(for="#input-from").price-filter-label
-						span.price-filter-input-title От:
-						input(type="text" value="1600").price-filter-input#input-from
-					label(for="#input-to").price-filter-label
-						span.price-filter-input-title До:
-						input(type="text" value="120000").price-filter-input#input-to
-				
-				.price-filter-elem
-					.price-filter-slider#priceSlider
-					.price-filter-slider-min#priceSlider-min
-					.price-filter-slider-max#priceSlider-max
-
-				.price-filter-elem.price-filter-buttons
-					.price-filter-btn.default-btn
-						span.price-filter-btn-text Найти 
-						span.price-filter-btn-value (16)
-					.price-filter-clear
+		.wrapper-header Коллекции
 
 		.media 
 			a(href="").media-elem
@@ -88,8 +73,7 @@ include ../var/top_line.pug
 					img(src="style/img/catalog/catalog-img-3.jpg", alt="").media-img
 				.media-name Обувной шкаф Contorno
 				.media-price От 57800 ₽
-			
-
+	
 	a(href="").inst.inst-single
 		.inst-wrap
 			.inst-title

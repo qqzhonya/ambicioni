@@ -166,24 +166,25 @@
 				&:hover
 					text-decoration: underline
 
-.header.header-main-page
+.header.header-absolute
 	position: absolute
 	top: 0
-	left: 50%
+	left: 0
 	width: 100%
 	z-index: 100
-	background-color: transparent
-	+prefix(transform, translate(-50%))
 
-	.header-number
-		color: $accent-dark-color
-
-	.header-search
-		&-input
+	&.header-inverse
+		background-color: transparent
+		
+		.header-number
 			color: $accent-dark-color
-			background-color: $white
-			border-color: $accent-dark-color
 
-	.header-nav
-		&-link
-			color: $accent-dark-color
+		.header-search
+			&-input
+				color: $accent-dark-color
+				background-color: $white
+				border-color: $accent-dark-color
+
+		.header-nav
+			&-link
+				color: $accent-dark-color

@@ -1,0 +1,76 @@
+.product	
+	
+	&-wrap
+		margin:
+			top: 60px
+
+	&-elem
+		&:first-child
+			width: 57%
+
+	&-slider
+		position: relative
+		width: 100%
+		max-width: 670px
+
+		&-elem
+			position: relative
+			width: 100%
+			outline: none
+
+		.slick-arrow
+			position: absolute
+			bottom: 25px
+			width: 13px
+			height: 24px
+			font-size: 0
+			background-color: transparent
+			background-size: cover
+			background-position: center center
+			background-repeat: no-repeat
+			border: 0
+			z-index: 10
+			cursor: pointer
+
+		.slick-prev
+			margin:
+				left: -35px
+			left: 50%
+			background-image: url(../img/icon/arrow-slider-left.svg)
+		
+		.slick-next
+			margin:
+				right: -35px
+			right: 50%
+			background-image: url(../img/icon/arrow-slider-right.svg)
+
+		&-nav
+			margin:
+				top: 30px
+			width: 100%
+
+			.slick-list
+				margin: 0 -6px
+
+			.slick-slide
+				margin: 0 6px
+				cursor: pointer
+				border: 1px solid transparent
+				border-radius: 0
+				+prefix(transition, $default-transition)
+				outline: none
+
+				&:hover
+					border-color: $font-light-color
+
+				&.slick-current.slick-active
+					border: 1px solid $accent-dark-color
+
+			&-elem
+				position: relative
+
+				img
+					margin: 0 auto
+					width: 100%
+
+

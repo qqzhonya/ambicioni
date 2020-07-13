@@ -80,71 +80,88 @@ a
 		height: 100%
 		object-fit: scale-down
 
-	.owl-nav
+	.slick-arrow
 		position: absolute
-		left: 50%
-		bottom: 30px
+		bottom: 26px
 		width: 100%
 		max-width: 314px
 		height: 24px
-		+prefix(transform, translate(-50%))
+		border: 0
+		background-color: transparent
+		z-index: 10
+		cursor: pointer
 
-		button.owl-prev,
-		button.owl-next
-			position: absolute
-			width: 13px
-			height: 24px
-			top: 0
-			font-size: 0
+	button.slick-prev,
+	button.slick-next
+		position: absolute
+		width: 13px
+		height: 24px
+		font-size: 0
 
-		button.owl-prev
-			left: 0
-			background-image: url(../img/icon/arrow-slider-left.svg)
-		
-		button.owl-next
-			right: 0
-			background-image: url(../img/icon/arrow-slider-right.svg)
+	button.slick-prev
+		margin:
+			left: -160px
+		left: 50%
+		background-image: url(../img/icon/arrow-slider-left.svg)
+	
+	button.slick-next
+		margin:
+			right: -160px
+		right: 50%
+		background-image: url(../img/icon/arrow-slider-right.svg)
 
-	.owl-dots
+	.slick-dots
+		+flex
 		position: absolute
 		bottom: 30px
 		left: 50%
+		list-style-type: none
 		+prefix(transform, translate(-50%))
+		+justify-content(center)
 
-	button.owl-dot
-		position: relative
-		margin:
-			right: 28px
-			left: 15px
-		width: 15px
-		height: 15px
-		background-color: transparent
-		border: 2px solid rgba(255, 255, 255, .5)
-		border-radius: 15px
-		+prefix(transition, $default-transition)
-
-		&:first-child
+		li
+			display: inline-block
+			position: relative
 			margin:
-				left: 0
+				right: 28px
+				left: 15px
 
-		&:last-child
-			margin:
-				right: 0
+			&:first-child
+				margin:
+					left: 0
+
+			&:last-child
+				margin:
+					right: 0
+				&::after
+					display: none
+
 			&::after
-				display: none
+				content: ''
+				display: block
+				position: absolute
+				top: 7px
+				right: -28px
+				width: 13px
+				height: 1px
+				background-color: rgba(255, 255, 255, .5)
 
-		&::after
-			content: ''
+			&.slick-active
+				button
+					border-color: transparent
+					background-color: rgba(255, 255, 255, .5)
+
+		button
 			display: block
-			position: absolute
-			width: 13px
-			height: 1px
-			right: -30px
-			background-color: rgba(255, 255, 255, .5)
-
-	button.owl-dot.active
-		border-color: transparent
-		background-color: rgba(255, 255, 255, .5)
+			position: relative
+			width: 15px
+			height: 15px
+			font-size: 0
+			background-color: transparent
+			border: 2px solid rgba(255, 255, 255, .5)
+			border-radius: 15px
+			+prefix(transition, $default-transition)
+			cursor: pointer
 
 .wrapper-box
 	+flex
@@ -234,12 +251,22 @@ a
 		+justify-content(space-between)
 		+flex-wrap(wrap)
 
+		&.catalog-arr
+			.catalog-elem
+				&:hover
+					.catalog-name
+						text-decoration: none
+			
+			.catalog-name
+				padding:
+					right: 70px
+
 	&-elem
 		position: relative
 		margin:
 			bottom: 30px
 		padding:
-			bottom: 35.1%
+			bottom: 48.8%
 		width: 48.8%
 		overflow: hidden
 
@@ -247,6 +274,9 @@ a
 			.catalog-btn
 				&::after
 					width: 100%
+			
+			.catalog-name
+				text-decoration: underline
 
 	&-img
 		display: block
@@ -270,12 +300,15 @@ a
 
 	&-name
 		position: relative
-		padding: 20px 45px
+		padding: 17px 45px
 		font-size: 30px
 		color: $white
 		text-transform: uppercase
 		text-align: center
 		z-index: 1
+		text-overflow: ellipsis
+		white-space: nowrap
+		overflow: hidden
 	
 	&-btn
 		position: absolute
@@ -380,6 +413,10 @@ a
 			height: 100%
 			max-height: 100%
 
+.inst-single
+	.inst-wrap
+		+justify-content(center)
+
 .price-filter
 	position: relative
 
@@ -397,7 +434,12 @@ a
 			max-width: 47%
 		
 		&:nth-child(2)
+			margin:
+				right: 40px
 			max-width: 27%
+		
+		&:nth-child(3)
+			max-width: 19%
 
 	&-input-wrap
 		+flex
@@ -469,8 +511,6 @@ a
 		+align-items(center)
 
 	&-btn
-		margin:
-			left: 40px
 		max-width: 185px
 		font-size: 18px
 
@@ -486,4 +526,112 @@ a
 		background-size: cover 
 		background-position: center center
 		background-repeat: no-repeat
+
+.media
+	+flex
+	margin: 0 -15px
+		top: 45px
+	+flex-wrap(wrap)
+
+	&-elem
+		display: block
+		margin:
+			top: 60px
+		padding: 0 15px
+		width: 33.33%
+		text-align: center
+
+		&:hover
+			.media-name
+				text-decoration: underline
+	
+	&-img-box
+		position: relative
+		padding:
+			bottom: 100%
+		width: 100%
+	
+	&-img
+		display: block
+		position: absolute
+		margin: auto
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		width: 100%
+		max-width: 100%
+		height: 100%
+		max-height: 100%
+	
+	&-name
+		display: inline-block
+		position: relative
+		margin: 0 auto
+			top: 25px
+		width: 100%
+		font-size: 16px
+		text-transform: uppercase
+		color: $accent-dark-color
+		text-overflow: ellipsis
+		white-space: nowrap
+		overflow: hidden
+	
+	&-price
+		margin:
+			top: 7px
+		font-size: 14px
+		color: $accent-dark-color
+
+.show-more
+	margin: 0 auto
+		top: 70px
+	max-width: 300px
+
+.pagination
+	+flex
+	margin:
+		top: 60px
+	+justify-content(center)
+	+align-items(center)
+
+	&-elem
+		+flex
+		margin: 0 5px
+		padding: 10px 0 6px 0
+		font-size: 18px
+		line-height: normal
+		color: $accent-dark-color
+		width: 30px
+		height: 30px
+		border: 1px solid $accent-dark-color
+		+justify-content(center)
+		+align-items(center)
+		+prefix(transition, $default-transition)
+
+		&:not(.active):hover
+			color: $font-light-color
+
+	&-elem.active
+		color: $white
+		background-color: $accent-dark-color
+	
+	&-delimer
+		border-color: transparent
+
+	&-nav
+		border-color: transparent
+		&-icon
+			path
+				+prefix(transition, $default-transition)
+		
+		&:not(.disabled):hover
+			.pagination-nav-icon
+				path
+					fill: #000
+	
+	&-nav.disabled 
+		.pagination-nav-icon
+			path
+				fill: #C4C4C4
 
