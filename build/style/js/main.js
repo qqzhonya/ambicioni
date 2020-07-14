@@ -140,4 +140,47 @@ $(function() {
 	//
 	// Product slider end
 	//
+
+	//
+	// Custom select
+	//
+
+	$('.custom-select').each(function() {
+		$('.custom-select').select2({
+			minimumResultsForSearch: Infinity
+		});
+	});
+
+	function selectColor (color) {
+		if (!color.id) {
+			return color.text;
+		}
+
+		var baseUrl = "style/img/productColor";
+		var $color = $(
+			'<span class="product-select-option"><img src="' + baseUrl + '/' + color.element.value.toLowerCase() + '.jpg" class="product-color-img" /> '+ color.text +' </span>'
+		);
+		return $color;
+	};
+
+	$('#select-color').select2({
+		templateSelection: selectColor,
+		templateResult: selectColor,
+		minimumResultsForSearch: Infinity
+	});
+
+	$('.custom-select').on('select2:open', function() {
+		$('.select2-dropdown .select2-results__options').mCustomScrollbar('destroy');
+    $('.select2-dropdown .select2-results__options').mCustomScrollbar('update');
+    setTimeout(function() {
+        $('.select2-dropdown .select2-results__options').mCustomScrollbar({
+						axis: 'y',
+						theme: 'customScroll-select'
+        });
+    }, 0);
+	});
+
+	//
+	// Custom select end
+	//
 });

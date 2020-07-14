@@ -1,12 +1,18 @@
 .product	
 	
 	&-wrap
+		+flex
 		margin:
 			top: 60px
 
 	&-elem
 		&:first-child
 			width: 57%
+		
+		&:last-child
+			margin:
+				left: 60px
+			width: 43%
 
 	&-slider
 		position: relative
@@ -73,4 +79,132 @@
 					margin: 0 auto
 					width: 100%
 
+	&-name
+		margin:
+			top: 20px
+		font-size: 30px
+		text-transform: uppercase
 
+	&-vendor
+		margin: 
+			top: 5px
+		font-size: 22px 
+
+	&-form
+		margin:
+			top: 35px
+
+	&-select
+		&-wrap
+			+flex
+			margin:
+				bottom: 20px
+			+align-items(center)
+
+		&-label
+			display: inline-block
+			margin:
+				right: 20px
+			min-width: 80px
+			font-size: 22px
+		
+.select2
+	&-container
+		display: block
+		width: 100%  !important
+		max-width: 340px
+		height: auto
+		font-size: 18px
+		
+	.select2-selection--single 
+		height: auto
+		border-color: $accent-dark-color
+		border-radius: 0
+		outline: none
+
+		.select2-selection__rendered
+			padding: 16px 25px 12px 25px
+
+		.select2-selection__arrow
+			margin:
+				top: -4px
+			top: 50%
+			right: 18px
+			width: 14px 
+			height: 7px
+			background-image: url(../img/icon/arrow-down.svg)
+			background-size: cover
+			background-position: center center
+			background-repeat: no-repeat
+
+			b
+				display: none
+
+.select2-results__option
+	font-size: 18px
+
+.select2-container--default .select2-results__option--highlighted[aria-selected]
+	color: $accent-dark-color
+	background-color: transparent
+	text-decoration: underline
+
+.select2-container--default .select2-results__option[aria-selected=true]
+	color: $font-light-color
+	background-color: transparent
+
+.select2-dropdown
+	border-radius: 0
+
+.select2-results
+	min-height: 340px
+	max-height: 340px
+
+.product-color-img
+	margin:
+		right: 15px
+	width: 50px
+	height: 31px
+		
+.select2-results__option
+	position: relative
+	margin:
+		bottom: 13px
+	padding: 0
+
+.select2-container--default .select2-results
+	 .select2-results__options
+			max-height: 340px
+			border-radius: 0
+
+.product-select-option
+	+flex
+	+align-items(center)
+	font-size: 18px
+	line-height: 22px
+
+.mCSB_container 
+	padding: 25px 
+		top: 18px
+		right: 0
+
+.mCSB_draggerContainer
+	margin: 10px 0
+	
+.mCSB_scrollTools 
+	max-width: 14px
+	background-color: #F4F4F4
+
+	&:hover
+		.mCSB_dragger 
+			.mCSB_dragger_bar
+				background-color: $accent-dark-color !important
+
+	.mCSB_draggerRail
+		width: 6px
+		background-color: #f4f4f4
+		border-radius: 0
+
+	.mCSB_dragger 
+		.mCSB_dragger_bar
+			border-radius: 0
+			background-color: $accent-dark-color !important

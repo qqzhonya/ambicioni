@@ -4,6 +4,7 @@ include ../var/top_line.pug
 	.wrapper
 		.product-wrap
 			.product-elem
+
 				.product-slider
 					.product-slider-elem
 						img(src="style/img/product-img-1.jpg", alt="").product-slider-img
@@ -23,6 +24,7 @@ include ../var/top_line.pug
 						img(src="style/img/product-img-1.jpg", alt="").product-slider-img
 					.product-slider-elem
 						img(src="style/img/product-img-1.jpg", alt="").product-slider-img
+				
 				.product-slider-nav
 					.product-slider-nav-elem
 						img(src="style/img/product-img-1.jpg", alt="").product-slider-img
@@ -42,9 +44,33 @@ include ../var/top_line.pug
 						img(src="style/img/product-img-1.jpg", alt="").product-slider-img
 					.product-slider-nav-elem
 						img(src="style/img/product-img-1.jpg", alt="").product-slider-img
-
+			
 			.product-elem
-	
+				.product-name Обувной шкаф Contorno
+				.product-vendor 
+					span Артикул: 
+					span.product-vendro-value 77621/7 
+				form.product-form
+					.product-select-wrap
+						label(for="#select-size").product-select-label Размер:
+						select(name="product-size").custom-select#select-size
+							option(value="0" selected) 80х35х87.5 см
+							option(value="1") 83х37х90 см
+							option(value="2") 96х31х83 см
+							option(value="3") 60х15х65 см
+							option(value="4") 99х49х100 см
+							
+					.product-select-wrap
+						label(for="#select-color").product-select-label Цвет:
+						select(name="product-size").custom-select#select-color
+							option(value="cream" selected) Кремовый
+							option(value="white") Белый
+							option(value="lightgray") Светло-серый
+							option(value="gray") Серый
+							option(value="darkgray") Темно-серый
+							option(value="blue") Синий
+							option(value="green") Зеленый
+
 	a(href="").inst
 		.inst-wrap
 			.inst-title
