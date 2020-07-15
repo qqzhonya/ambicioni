@@ -183,4 +183,129 @@ $(function() {
 	//
 	// Custom select end
 	//
+
+	//
+	// Product tab 
+	//
+
+	$('ul.product-tab-nav').on('click', 'li:not(.active)', function() {
+    $(this)
+      .addClass('active').siblings().removeClass('active')
+      .closest('div.product-tab').find('div.product-tab-elem').removeClass('active').eq($(this).index()).addClass('active');
+  });
+
+	//
+	// Product tab end
+	//
+
+	//
+	// Product other slider
+	//
+	
+	$('.product-other-slider').slick({
+		slidesToShow: 5,
+		slidesToScroll: 1,
+		dots: false,
+		arrows: true,
+		infinite: false,
+	});
+
+	//
+	// Product other slider end
+	//
+
+	//
+	// Modal product slider
+	//
+
+	function modalProduct() {
+		$('.modal-product-slider').slick({
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			arrows: true,
+			dots: false,
+			fade: true,
+			asNavFor: '.modal-product-slider-nav'
+		});
+	
+		$('.modal-product-slider-nav').slick({
+			slidesToShow: 4,
+			slidesToScroll: 1,
+			asNavFor: '.modal-product-slider',
+			dots: false,
+			arrows: false,
+			centerMode: false,
+			focusOnSelect: true,
+			vertical: true,
+			verticalSwiping: true,
+		});
+	}
+
+	//
+	// Modal product slider
+	//
+
+	//
+	// Open modal
+	//
+
+	function initModal(button) {
+		button.click(function (event) {
+			// var buttonVal = $(this).data("modal-btn");
+			// var showModal = $(document).find('.modal').data("modal", buttonVal);
+
+			// console.log(showModal);
+			
+			// showModal.fadeIn();
+
+			$('body').addClass('modal-active');
+			
+			if(button.hasClass('product-slider-elem')) {
+				$('.modal-product').fadeIn();
+				modalProduct();
+			} else if (button.hasClass('product-discussion-btn')) {
+				$('.modal-discussion').fadeIn();
+			} else if (button.hasClass('product-faq-btn')) {
+				$('.modal-faq').fadeIn();
+			}
+		})
+	}	
+
+	initModal($('.product-slider-elem'));
+	initModal($('.product-discussion-btn'));
+	initModal($('.product-faq-btn'));
+
+	$('.modal-close, .modal-bg').click(function() {
+		$('.modal').fadeOut();
+		$('body').removeClass('modal-active');
+	})
+
+	//
+	// Open modal end
+	//
+
+	//
+	// Cart quantity 
+	//
+
+	$('.cart-number-plus').click(function () {
+		var $input = $(this).parent().parent().find('input');
+		$input.val(parseInt($input.val()) + 1);
+		$input.change();
+		return false;
+	});
+
+	$('.cart-number-minus').click(function () {
+		var $input = $(this).parent().parent().find('input');
+		var count = parseInt($input.val()) - 1;
+		count = count < 1 ? 1 : count;
+		$input.val(count);
+		$input.change();
+		return false;
+	});
+	
+
+	//
+	// Cart quantity end
+	//
 });

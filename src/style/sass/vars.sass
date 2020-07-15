@@ -31,7 +31,9 @@ html
 body 
 	position: relative
 	height: 100%
-	// overflow: hidden
+
+	&.modal-active
+		overflow: hidden
 
 button,
 input,
@@ -63,6 +65,14 @@ a
 	&:hover
 		color: $accent-dark-color
 		background-color: $white
+
+	&.btn-inv
+		color: $accent-dark-color
+		background-color: $white
+
+		&:hover
+			color: $white
+			background-color: $accent-dark-color
 
 .header-slider
 	position: relative
@@ -193,8 +203,9 @@ a
 	position: relative
 	margin: 0 
 		top: 130px
-	max-height: 658px
 	padding: 0
+	overflow: hidden
+	max-height: 658px
 
 .video
 	position: relative
@@ -203,7 +214,6 @@ a
 	width: 100%
 	height: auto
 	outline: none
-	overflow: hidden
 	z-index: 5
 
 	&-prev

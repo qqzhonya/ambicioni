@@ -6,23 +6,23 @@ include ../var/top_line.pug
 			.product-elem
 
 				.product-slider
-					.product-slider-elem
+					.product-slider-elem.modal-btn(data-modal-btn="product-modal")
 						img(src="style/img/product-img-1.jpg", alt="").product-slider-img
-					.product-slider-elem
+					.product-slider-elem.modal-btn(data-modal-btn="product-modal")
 						img(src="style/img/product-img-1.jpg", alt="").product-slider-img
-					.product-slider-elem
+					.product-slider-elem.modal-btn(data-modal-btn="product-modal")
 						img(src="style/img/product-img-1.jpg", alt="").product-slider-img
-					.product-slider-elem
+					.product-slider-elem.modal-btn(data-modal-btn="product-modal")
 						img(src="style/img/product-img-1.jpg", alt="").product-slider-img
-					.product-slider-elem
+					.product-slider-elem.modal-btn(data-modal-btn="product-modal")
 						img(src="style/img/product-img-1.jpg", alt="").product-slider-img
-					.product-slider-elem
+					.product-slider-elem.modal-btn(data-modal-btn="product-modal")
 						img(src="style/img/product-img-1.jpg", alt="").product-slider-img
-					.product-slider-elem
+					.product-slider-elem.modal-btn(data-modal-btn="product-modal")
 						img(src="style/img/product-img-1.jpg", alt="").product-slider-img
-					.product-slider-elem
+					.product-slider-elem.modal-btn(data-modal-btn="product-modal")
 						img(src="style/img/product-img-1.jpg", alt="").product-slider-img
-					.product-slider-elem
+					.product-slider-elem.modal-btn(data-modal-btn="product-modal")
 						img(src="style/img/product-img-1.jpg", alt="").product-slider-img
 				
 				.product-slider-nav
@@ -44,12 +44,46 @@ include ../var/top_line.pug
 						img(src="style/img/product-img-1.jpg", alt="").product-slider-img
 					.product-slider-nav-elem
 						img(src="style/img/product-img-1.jpg", alt="").product-slider-img
-			
+
+				.product-tab
+					ul.product-tab-nav
+						li.product-tab-nav-elem.active
+							.product-tab-nav-link Описание
+						li.product-tab-nav-elem
+							.product-tab-nav-link Видео коллекции
+
+					.product-tab-elem.product-tab-description.active
+						p
+							| Ретро-дизайн с современным кроем. Две раздвижные двери, 
+							| три отделения с полками. Яркие контрастные внутренние 
+							| вставки окрашенные эмалью на фоне натуральной древесины 
+							| придают ему особый вид.
+						p
+							| Этот современный медиа-блок не просто великолепно смотрится, 
+							| он также долговечен и функционален.
+						p 
+							| Открытое пространство предлагает более чем достаточно места для аудио, 
+							| видео компонентов, в то время как два оставшихся отделения имеют 
+							| достаточно много места для ваших коллекций.
+						p
+							| Ретро-дизайн с современным кроем. Две раздвижные двери, три отделения 
+							| с полками. Яркие контрастные внутренние вставки окрашенные эмалью.
+
+					.product-tab-elem.product-tab-video
+						.video-wrap
+							button(onclick="play_pause()").video-prev
+								.video-text Designwear
+								.video-play-btn
+							video(width="100" controls).video#video
+								source(src="style/img/postmalone.mp4")
+
 			.product-elem
 				.product-name Обувной шкаф Contorno
+				
 				.product-vendor 
 					span Артикул: 
 					span.product-vendro-value 77621/7 
+				
 				form.product-form
 					.product-select-wrap
 						label(for="#select-size").product-select-label Размер:
@@ -71,6 +105,169 @@ include ../var/top_line.pug
 							option(value="blue") Синий
 							option(value="green") Зеленый
 
+				a(href="").product-link Посмотреть другие изделия коллекции
+
+				.product-buy
+					.product-buy-price 57800 ₽
+					.default-btn.product-buy-btn В корзину
+				
+				.default-btn.btn-inv.product-discussion-btn.modal-btn(data-modal-btn="discussion-modal") Обсудить изделие
+
+				.product-info
+					.product-info-title Размеры и габариты
+					.product-info-item
+						.product-info-elem.product-info-name Ширина
+						.product-info-elem.product-info-value 80 см
+					.product-info-item
+						.product-info-elem.product-info-name Высота
+						.product-info-elem.product-info-value 35 см
+					.product-info-item
+						.product-info-elem.product-info-name Глубина
+						.product-info-elem.product-info-value 87.5 см
+				
+				.product-info
+					.product-info-title Характеристики
+					.product-info-item
+						.product-info-elem.product-info-name Материал корпуса
+						.product-info-elem.product-info-value Березовая фанера
+					.product-info-item
+						.product-info-elem.product-info-name Материал ножек/основания
+						.product-info-elem.product-info-value Шпон ценных пород
+					.product-info-item
+						.product-info-elem.product-info-name Материал ручек
+						.product-info-elem.product-info-value Шпон ценных пород
+
+				.product-info
+					.product-info-title ВОПРОСЫ И ОТВЕТЫ
+					.product-faq-btn.modal-btn(data-modal-btn="faq-modal") Где посмотреть товары?
+					.product-faq-btn.modal-btn(data-modal-btn="faq-modal") Сколько стоит доставка?
+					.product-faq-btn.modal-btn(data-modal-btn="faq-modal") Какие условия для работы с дизайнерами?
+					.product-faq-btn.modal-btn(data-modal-btn="faq-modal") Нужна ли предоплата заказа?
+					a(href="").product-faq-link Ещё
+
+		.product-other
+			.product-other-title Другие изделия этой коллекции
+			.product-other-slider
+				.product-other-elem
+					.product-other-img-box
+						img(src="style/img/product-img-1.jpg", alt="").product-other-img
+					.product-other-info
+						.product-other-name Витрина Bairo
+						.proudct-other-price 95600 ₽
+				.product-other-elem
+					.product-other-img-box
+						img(src="style/img/product-img-1.jpg", alt="").product-other-img
+					.product-other-info
+						.product-other-name Витрина Bairo
+						.proudct-other-price 95600 ₽
+				.product-other-elem
+					.product-other-img-box
+						img(src="style/img/product-img-1.jpg", alt="").product-other-img
+					.product-other-info
+						.product-other-name Витрина Bairo
+						.proudct-other-price 95600 ₽
+				.product-other-elem
+					.product-other-img-box
+						img(src="style/img/product-img-1.jpg", alt="").product-other-img
+					.product-other-info
+						.product-other-name Витрина Bairo
+						.proudct-other-price 95600 ₽
+				.product-other-elem
+					.product-other-img-box
+						img(src="style/img/product-img-1.jpg", alt="").product-other-img
+					.product-other-info
+						.product-other-name Витрина Bairo
+						.proudct-other-price 95600 ₽
+				.product-other-elem
+					.product-other-img-box
+						img(src="style/img/product-img-1.jpg", alt="").product-other-img
+					.product-other-info
+						.product-other-name Витрина Bairo
+						.proudct-other-price 95600 ₽
+			a(href="").default-btn.btn-inv.product-other-btn Посмотреть всю коллекцию
+
+		.product-other
+			.product-other-title Ранее смотрели
+			.product-other-slider
+				.product-other-elem
+					.product-other-img-box
+						img(src="style/img/product-img-1.jpg", alt="").product-other-img
+					.product-other-info
+						.product-other-name Витрина Bairo
+						.proudct-other-price 95600 ₽
+				.product-other-elem
+					.product-other-img-box
+						img(src="style/img/product-img-1.jpg", alt="").product-other-img
+					.product-other-info
+						.product-other-name Витрина Bairo
+						.proudct-other-price 95600 ₽
+				.product-other-elem
+					.product-other-img-box
+						img(src="style/img/product-img-1.jpg", alt="").product-other-img
+					.product-other-info
+						.product-other-name Витрина Bairo
+						.proudct-other-price 95600 ₽
+				.product-other-elem
+					.product-other-img-box
+						img(src="style/img/product-img-1.jpg", alt="").product-other-img
+					.product-other-info
+						.product-other-name Витрина Bairo
+						.proudct-other-price 95600 ₽
+				.product-other-elem
+					.product-other-img-box
+						img(src="style/img/product-img-1.jpg", alt="").product-other-img
+					.product-other-info
+						.product-other-name Витрина Bairo
+						.proudct-other-price 95600 ₽
+				.product-other-elem
+					.product-other-img-box
+						img(src="style/img/product-img-1.jpg", alt="").product-other-img
+					.product-other-info
+						.product-other-name Витрина Bairo
+						.proudct-other-price 95600 ₽
+			a(href="").default-btn.btn-inv.product-other-btn Показать все
+
+		.product-other
+			.product-other-title Похожие товары
+			.product-other-slider
+				.product-other-elem
+					.product-other-img-box
+						img(src="style/img/product-img-1.jpg", alt="").product-other-img
+					.product-other-info
+						.product-other-name Витрина Bairo
+						.proudct-other-price 95600 ₽
+				.product-other-elem
+					.product-other-img-box
+						img(src="style/img/product-img-1.jpg", alt="").product-other-img
+					.product-other-info
+						.product-other-name Витрина Bairo
+						.proudct-other-price 95600 ₽
+				.product-other-elem
+					.product-other-img-box
+						img(src="style/img/product-img-1.jpg", alt="").product-other-img
+					.product-other-info
+						.product-other-name Витрина Bairo
+						.proudct-other-price 95600 ₽
+				.product-other-elem
+					.product-other-img-box
+						img(src="style/img/product-img-1.jpg", alt="").product-other-img
+					.product-other-info
+						.product-other-name Витрина Bairo
+						.proudct-other-price 95600 ₽
+				.product-other-elem
+					.product-other-img-box
+						img(src="style/img/product-img-1.jpg", alt="").product-other-img
+					.product-other-info
+						.product-other-name Витрина Bairo
+						.proudct-other-price 95600 ₽
+				.product-other-elem
+					.product-other-img-box
+						img(src="style/img/product-img-1.jpg", alt="").product-other-img
+					.product-other-info
+						.product-other-name Витрина Bairo
+						.proudct-other-price 95600 ₽
+			a(href="").default-btn.btn-inv.product-other-btn Показать все
+
 	a(href="").inst
 		.inst-wrap
 			.inst-title
@@ -89,3 +286,16 @@ include ../var/top_line.pug
 
 
 	include ../var/footer.pug
+
+script. 
+	video = document.getElementById('video');
+	play_pause_status = "play";
+	video.controls = false; 
+
+	function play_pause() {
+		video.play();
+		play_pause_status = "play";
+		$('.video-prev').fadeOut();
+		video.controls = true; 
+		console.log('hi');
+	}
