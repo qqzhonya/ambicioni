@@ -1,0 +1,43 @@
+.order
+
+	&-info
+		
+		&-total
+			+flex
+			+justify-content(space-between)
+			+align-items(flex-end)
+
+			&-text
+				font-size: 18px
+				color: $font-light-color
+			
+			&-value
+				font-size: 20px
+				color: $accent-dark-color
+				text-transform: uppercase
+
+		.feedback-info
+			margin:
+				bottom: 0
+
+			&-elem
+				margin:
+					bottom: 20px
+
+			&-title
+				margin:
+					bottom: 35px
+
+			&-terms
+				margin:
+					top: 45px
+
+				.checkbox[type="checkbox"]:checked + label:before,
+				.checkbox[type="checkbox"]:not(:checked) + label:before
+					background-color: #F4F4F4
+	&-btn
+		margin:
+			top: 50px
+		font-size: 18px
+		max-width: 340px
+		user-select: none

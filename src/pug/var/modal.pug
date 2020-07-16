@@ -78,3 +78,26 @@
 			| Ретро-дизайн с современным кроем. Две раздвижные двери, три отделения с 
 			| полками. Яркие контрастные внутренние вставки окрашенные эмалью на 
 			| фоне натуральной древесины придают ему особый вид.
+
+.modal.modal-quick
+	.modal-bg
+	.modal-body
+		.modal-close
+		.modal-heading Быстрый заказ
+		.modal-description 
+			| Отправьте нам свой телефон, в ближайшее время мы с 
+			| Вами свяжемся для уточнения всех деталей.
+		.modal-form
+			input(type="text" placeholder="Имя").modal-input
+			input(type="text" placeholder="Телефон").modal-input
+			button.default-btn.modal-form-btn Заказать
+
+.modal.modal-order
+	.modal-bg
+	.modal-body
+		.modal-close
+		.modal-heading Заказ оформлен
+		.modal-description
+			| Ваш заказ оформлен! Информация по доставке придет 
+			| на почту в течение 5 минут!
+		a(href="").default-btn.modal-order-back-btn Вернуться к покупкам

@@ -267,6 +267,10 @@ $(function() {
 				$('.modal-discussion').fadeIn();
 			} else if (button.hasClass('product-faq-btn')) {
 				$('.modal-faq').fadeIn();
+			} else if (button.hasClass('cart-menu-quick')) {
+				$('.modal-quick').fadeIn();
+			} else if (button.hasClass('order-btn')) {
+				$('.modal-order').fadeIn();
 			}
 		})
 	}	
@@ -274,6 +278,8 @@ $(function() {
 	initModal($('.product-slider-elem'));
 	initModal($('.product-discussion-btn'));
 	initModal($('.product-faq-btn'));
+	initModal($('.cart-menu-quick'))
+	initModal($('.order-btn'))
 
 	$('.modal-close, .modal-bg').click(function() {
 		$('.modal').fadeOut();
@@ -304,8 +310,50 @@ $(function() {
 		return false;
 	});
 	
-
 	//
 	// Cart quantity end
+	//
+
+	//
+	// Cart show comment
+	//
+	
+	$('.cart-comment-btn').click(function() {
+		$(this).hide();
+		$('.cart-comment-form').show();
+	});
+
+	$('.cart-comment-form-close').click(function() {
+		$(this).parent().parent().find('.cart-comment-btn').show();
+		$(this).parent().parent().find('.cart-comment-form').hide();
+	});
+
+	//
+	// Cart show comment end
+	//
+
+	//
+	// Comment size 
+	//
+
+	$('.cart-comment-textarea').on('input',function(){
+		var input = $(this);
+		$('.cart-comment-symbols-value').text(input.val().length);
+	});
+
+	//
+	// Comment size end 
+	//
+
+	//
+	// Contact map
+	//
+
+	// function initContactMap() {
+
+	// }
+
+	//
+	// Contact map end
 	//
 });

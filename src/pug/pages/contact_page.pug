@@ -1,0 +1,71 @@
+include ../var/top_line.pug
+
+.wrapper-box
+	.wrapper
+		.wrapper-header Контакты
+
+		.feedback
+			.feedback-elem.feedback-form-wrap
+				form(action="").main-form
+					.main-form-title Обратная связь
+					.main-form-elem
+						label(for="#contact-name").main-form-label ФИО
+						input(type="text" name="contactName" required).main-form-input#contact-name
+					.main-form-elem
+						label(for="#contact-email").main-form-label Email
+						input(type="text" name="contactEmail" required).main-form-input#contact-email
+					.main-form-elem
+						label(for="#contact-message").main-form-label Сообщение
+						textarea(name="contactMessage").main-form-input.main-form-textarea#contact-message
+					.feedback-info-terms
+						p.checkbox-wrap
+							input(type="checkbox" id="order-terms-checkbox").checkbox
+							label(for="order-terms-checkbox")
+						.feedback-info-terms-text
+							| Я соглашаюсь с 
+							a(href="").feedback-info-terms-link политикой обработки персональных данных
+					.default-btn.feedback-btn Оформить заказ
+			.feedback-elem.feedback-info-wrap
+				.feedback-info
+					.feedback-info-title Данные для связи
+					.feedback-info-elem
+						.feedback-info-name Телефон
+						a(href="tel:+84952121665").feedback-info-link 8 (495) 212 16-65
+					.feedback-info-elem
+						.feedback-info-name Email
+						a(href="mailto:info@ambicioni.ru").feedback-info-link info@ambicioni.ru
+				
+				.feedback-info
+					.feedback-info-title График работы
+					.feedback-info-elem
+						.feedback-info-name Пн-Пт:
+						.feedback-info-value с 10:00 до 19:00
+					.feedback-info-elem
+						.feedback-info-name Сб:
+						.feedback-info-value с 11:00 до 17:00
+				
+				.feedback-info
+					.feedback-info-title Время работы пункта самовывоза:
+					.feedback-info-elem
+						.feedback-info-name Пн-Пт:
+						.feedback-info-value с 10:00 до 19:00
+					.feedback-info-elem
+						.feedback-info-name Сб:
+						.feedback-info-value с 11:00 до 17:00
+				
+				.feedback-info
+					.feedback-info-title Адрес
+					.feedback-info-value
+						| Москва, 1-я ул. Машиностроения, д. 10 - пункт самовывоза
+								
+	.contact-map-wrap
+		iframe.contact-map(src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab3ac853a82ffacad5d01b2088d5cd7e133a8150626af67bf1ef8ba6520ebb40b&amp;source=constructor" width="100%" height="500" frameborder="0")
+
+	a(href="").inst.inst-single
+		.inst-wrap
+			.inst-title
+				.inst-logo
+					img(src="style/img/icon/inst-icon.svg", alt="")
+				.inst-text Ambicioni
+
+	include ../var/footer.pug

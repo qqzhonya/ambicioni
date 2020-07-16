@@ -375,6 +375,7 @@
 			background-size: cover
 			background-position: center center
 			background-repeat: no-repeat
+			+prefix(transition, $default-transition)
 
 			b
 				display: none
@@ -395,7 +396,6 @@
 	border-radius: 0
 
 .select2-results
-	min-height: 340px
 	max-height: 340px
 
 .product-color-img
@@ -414,6 +414,9 @@
 
 	.product-color-img
 		display: block
+	
+	.select2-selection__arrow
+		+prefix(transform, rotate(180deg))
 		
 .select2-results__option
 	position: relative

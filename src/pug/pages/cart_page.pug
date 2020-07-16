@@ -23,7 +23,51 @@ include ../var/top_line.pug
 						.cart-price 57 800 ₽
 						.cart-delete
 					.cart-bottom
-						.cart-comment-btn
+						.cart-comment-btn Добавить комментарий
+						form(action="").cart-comment-form
+							.cart-comment-form-close
+							textarea(name="comment" placeholder="Ваш комментарий" maxlength="250").cart-comment-textarea
+							.cart-comment-form-bottom
+								.cart-comment-symbols
+									span.cart-comment-symbols-value 0 
+									span.cart-comment-symbols-max / 250
+								.cart-comment-save Сохранить
+
+			.cart-product
+				.cart-img-box
+					img(src="style/img/product-img-1.jpg", alt="").cart-img
+				.cart-product-wrap
+					.cart-top
+						.cart-info
+							.cart-name Обувной шкаф Contorno
+							.cart-size
+								span.cart-size-text Размер: 
+								span.cart-size-value 80х35х87.5 см
+						.cart-number
+							input(type="text" placeholder="0" value="1").cart-number-input
+							.cart-number-control
+								span.cart-number-plus
+								span.cart-number-minus
+						.cart-price 57 800 ₽
+						.cart-delete
+					.cart-bottom
+						.cart-comment-btn Добавить комментарий
+						form(action="").cart-comment-form
+							.cart-comment-form-close
+							textarea(name="comment" placeholder="Ваш комментарий" maxlength="250").cart-comment-textarea
+							.cart-comment-form-bottom
+								.cart-comment-symbols
+									span.cart-comment-symbols-value 0 
+									span.cart-comment-symbols-max / 250
+								.cart-comment-save Сохранить
+
+			.cart-menu
+				.default-btn.btn-inv.cart-menu-quick Быстрый заказ
+				.cart-menu-order
+					.cart-menu-order-price
+						span.cart-menu-order-price-text Итого: 
+						span.cart-menu-order-price-value 57800 ₽
+					.default-btn.cart-menu-order-btn Оформить заказ
 
 	a(href="").inst.inst-single
 		.inst-wrap

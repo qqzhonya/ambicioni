@@ -1,0 +1,78 @@
+include ../var/top_line.pug
+
+.wrapper-box
+	.wrapper
+		.wrapper-header Оформление заказа
+
+		.feedback
+			.feedback-elem.feedback-form-wrap
+				form(action="").main-form
+					.main-form-title Адрес доставки
+					.main-form-elem
+						label(for="#order-name").main-form-label ФИО*
+						input(type="text" name="orderName" required).main-form-input#order-name
+					.main-form-elem
+						label(for="#order-city").main-form-label Город*
+						select(name="orderCity" required).main-form-select.custom-select#order-city
+							option(value="0") Москва
+							option(value="1") Санкт-Петербург
+							option(value="2") Москва
+							option(value="3") Санкт-Петербург
+							option(value="4") Москва
+							option(value="5") Санкт-Петербург
+							option(value="6") Москва
+							option(value="7") Санкт-Петербург
+							option(value="0") Москва
+							option(value="1") Санкт-Петербург
+							option(value="2") Москва
+							option(value="3") Санкт-Петербург
+							option(value="4") Москва
+							option(value="5") Санкт-Петербург
+							option(value="6") Москва
+							option(value="7") Санкт-Петербург
+					.main-form-elem
+						label(for="#order-address" ).main-form-label Адрес*
+						input(type="text" name="orderAddress" required).main-form-input#order-address
+					.main-form-elem
+						label(for="#order-email").main-form-label Email*
+						input(type="text" name="orderEmail" required).main-form-input#order-email
+					.main-form-elem
+						label(for="#order-phone").main-form-label Телефон*
+						input(type="text" name="orderPhone" required).main-form-input#order-phone
+					.main-form-elem
+						label(for="#order-comment").main-form-label Комментарий
+						textarea(name="orderComment").main-form-input.main-form-textarea#order-comment
+			.feedback-elem.feedback-info-wrap
+				.feedback-info.order-info
+					.feedback-info-title Состав заказа
+					.feedback-info-elem
+						.feedback-info-name 
+							a(href="").feedback-info-link Обувной шкаф Contorno
+							span.feedback-info-number (1)
+						.feedback-info-value 57 800 ₽
+					.feedback-info-elem
+						.feedback-info-name 
+							a(href="").feedback-info-link Обувной шкаф Contorno
+							span.feedback-info-number (1)
+						.feedback-info-value 57 800 ₽
+					.order-info-total
+						.order-info-total-text Итого:
+						.order-info-total-value 57800 ₽
+					.feedback-info-terms
+						p.checkbox-wrap
+							input(type="checkbox" id="order-terms-checkbox").checkbox
+							label(for="order-terms-checkbox")
+						.feedback-info-terms-text
+							| Я соглашаюсь с 
+							a(href="").feedback-info-terms-link политикой обработки персональных данных
+					.default-btn.order-btn Оформить заказ
+					
+
+	a(href="").inst.inst-single
+		.inst-wrap
+			.inst-title
+				.inst-logo
+					img(src="style/img/icon/inst-icon.svg", alt="")
+				.inst-text Ambicioni
+
+	include ../var/footer.pug

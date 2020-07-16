@@ -27,6 +27,7 @@ html, body
 html
 	height: 100%
 	scroll-behavior: smooth
+	// zoom: .8
 
 body 
 	position: relative
@@ -645,3 +646,198 @@ a
 			path
 				fill: #C4C4C4
 
+.feedback
+	+flex
+	
+	&-form-wrap
+		width: 57%
+	
+	&-info-wrap
+		padding:
+			left: 60px 
+		width: 43%
+	
+	&-info
+		margin:
+			bottom: 40px
+		max-width: 420px
+
+		&-title
+			margin:
+				bottom: 15px
+			font-size: 18px
+			text-transform: uppercase
+		
+		&-elem
+			+flex
+			margin:
+				bottom: 12px
+			font-size: 16px
+			+justify-content(space-between)
+
+		&-link
+			margin:
+				right: 5px
+			color: $accent-dark-color
+			text-decoration: underline
+
+			&:hover
+				opacity: $default-opacity
+			
+		&-number
+			color: $font-light-color
+
+		&-terms
+			+flex
+			margin: 0 0 0 auto
+				top: 25px
+			max-width: 418px
+		
+			&-text
+				margin:
+					top: 5px
+					left: 15px
+				user-select: none
+		
+			&-link
+				color: $accent-dark-color
+				text-decoration: underline
+
+				&:hover
+					opacity: $default-opacity
+
+	&-btn 
+		margin: 0 0 0 auto
+			top: 40px
+		max-width: 418px 
+
+.main-form
+	+flex 
+	padding: 60px 50px
+	max-width: 670px
+	background-color: #F4F4F4
+	+flex-flow(column)
+
+	&-elem
+		+flex 
+		margin:
+			bottom: 25px
+		
+		&:last-child 
+			margin:
+				bottom: 0
+
+	&-title
+		margin:
+			bottom: 50px
+		font-size: 27px
+		line-height: 36px
+		text-transform: uppercase
+	
+	&-label
+		display: inline-block
+		margin:
+			top: 15px
+			right: 15px
+		min-width: 135px
+		font-size: 18px
+		font-weight: 600
+		line-height: 22px
+	
+	&-input
+		padding: 10px 20px
+		width: 100%
+		font-size: 18px
+		border: 1px solid transparent
+		+prefix(transition, $default-transition)
+
+		&:focus
+			border-color: $accent-dark-color
+	
+	&-textarea
+		height: 100px
+		resize: none
+	
+	.select2 
+		&-container
+			max-width: 100%
+
+		.select2-selection--single
+			border-color: transparent
+			+prefix(transition, $default-transition)
+
+			.select2-selection__rendered
+				color: $font-light-color
+				+prefix(transition, $default-transition)
+
+			.select2-selection__arrow
+				background-image: url(../img/icon/arrow-order-down.svg)
+	
+		&.select2-container--open
+				.select2-selection--single
+					border-color: $accent-dark-color
+			
+				.select2-selection__rendered
+					color: $accent-dark-color
+
+.checkbox-wrap
+	display: inline-block
+	position: relative
+	width: 21px
+	height: 21px
+
+.checkbox[type="checkbox"]:checked,
+.checkbox[type="checkbox"]:not(:checked)
+	position: absolute
+	height: 0
+	width: 0
+	left: -9999px
+
+.checkbox[type="checkbox"]:checked + label,
+.checkbox[type="checkbox"]:not(:checked) + label
+	position: relative
+	padding-left: 28px
+	cursor: pointer
+	line-height: 20px
+	font-size: 16px
+	font-weight: 300
+	display: inline-block
+	color: #666
+
+.checkbox[type="checkbox"]:checked + label:before,
+.checkbox[type="checkbox"]:not(:checked) + label:before
+	content: ''
+	position: absolute
+	left: 0
+	top: -12px
+	width: 20px
+	height: 20px
+	border: 1px solid transparent
+	background-color: $white
+
+.checkbox[type="checkbox"]:checked + label:after,
+.checkbox[type="checkbox"]:not(:checked) + label:after
+	content: ''
+	width: 14px
+	height: 14px
+	background: $accent-dark-color
+	position: absolute
+	top: -8px
+	left: 4px
+	-webkit-transition: all 0.2s ease
+	transition: all 0.2s ease
+
+.checkbox[type="checkbox"]:not(:checked) + label:after
+	opacity: 0
+	-webkit-transform: scale(0)
+	transform: scale(0)
+
+.checkbox[type="checkbox"]:checked + label:after
+	opacity: 1
+	-webkit-transform: scale(1)
+	transform: scale(1)
+
+.contact-map-wrap
+	margin:
+		top: 30px
+	width: 100%
