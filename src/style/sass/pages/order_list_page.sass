@@ -1,0 +1,131 @@
+.order-list
+	&-elem
+		padding: 22px 0
+
+		&:first-child
+			padding:
+				top: 0
+
+		&.active
+			.order-list-heading-arrow
+				+prefix(transform, rotate(180deg))
+
+	&-heading
+		+flex
+		+justify-content(space-between)
+		cursor: pointer
+	
+		&-l,
+		&-r
+			+flex
+		
+		&-l
+			+align-items(flex-end)
+		
+		&-r
+			+align-items(center)
+
+		&-value,
+		&-num,
+		&-price
+			font-size: 30px
+			line-height: 30px
+			text-transform: uppercase
+		
+		&-num
+			margin:
+				left: 35px
+				right: 20px
+		
+		&-date
+			font-size: 20px
+			line-height: 26px
+			color: $font-light-color 
+		
+		&-arrow
+			margin:
+				top: -5px
+				left: 30px
+			width: 16px
+			height: 8px
+			background-image: url(../img/icon/arrow-down.svg)
+			background-size: cover
+			background-position: center center
+			background-repeat: no-repeat
+			+prefix(transition, $default-transition)
+	
+	&-dropdown
+		display: none
+
+	&-info
+		padding: 0 48px 0 33px
+		list-style-type: none
+		
+		&-elem
+			position: relative
+			padding: 15px 0
+				left: 25px
+			
+			&:first-child
+				margin:
+					top: 35px
+			
+			&::before
+				content: ''
+				display: block
+				position: absolute
+				top: 18px
+				left: 0
+				width: 10px
+				height: 10px
+				background-color: $accent-dark-color
+				border-radius: 100px
+
+		&-heading
+			+flex
+			+justify-content(space-between)
+
+		&-name,
+		&-price
+			font-size: 18px
+			line-height: 22px
+			color: $accent-dark-color
+
+		&-name
+			&:hover
+				text-decoration: underline
+		
+		&-price
+			text-transform: uppercase
+
+		.custom-text
+			color: $font-light-color
+
+			&:first-child
+				margin:
+					top: 15px
+
+	&-value
+		margin:
+			bottom: 38px
+		padding: 60px 45px 50px 60px
+		background-color: #F4F4F4	
+
+		&-item
+			+flex
+			margin: 
+				bottom: 25px
+			+justify-content(space-between)
+			+align-items(flex-end)
+
+			&:last-child
+				margin:
+					bottom: 0
+
+		&-text
+			font-size: 18px
+			line-height: 18px
+		
+		&-price
+			font-size: 30px
+			line-height: 24px

@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ambicioni</title>
+    <meta name="description" content="Ambicioni">
+    <meta name="keywords" content="test, test1, test2">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/css/jquery-ui.min.css">
+    <link rel="stylesheet" href="./style/css/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="./style/css/slick.css">
+    <link rel="stylesheet" href="./style/css/select2.min.css">
+    <link rel="stylesheet" href="./style/css/jquery.fancybox.css">
+    <link rel="stylesheet" href="./style/css/main.css">
+    <!-- Chrome, Firefox OS and Opera-->
+    <meta name="theme-color" content="#F6CB52">
+    <!-- Windows Phone-->
+    <meta name="msapplication-navbutton-color" content="#F6CB52">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#F6CB52">
+  </head>
+  <body>
+    <div class="modal modal-discussion" data-modal="discussion-modal">
+      <div class="modal-bg"></div>
+      <div class="modal-body">
+        <div class="modal-close"></div>
+        <div class="modal-heading">Обсудить с менеджером</div>
+        <div class="modal-discussion-info-wrap">
+          <div class="modal-discussion-info-elem">
+            <div class="modal-discussion-info-img-box"><img class="modal-discussion-info-img" src="style/img/product-img-1.jpg" alt=""></div>
+          </div>
+          <div class="modal-discussion-info-elem">
+            <div class="modal-discussion-info-name">Обувной шкаф Contorno</div>
+          </div>
+        </div>
+        <form class="modal-form" action="">
+          <input class="modal-input" type="text" placeholder="Имя">
+          <input class="modal-input" type="text" placeholder="Телефон">
+          <div class="modal-form-delimer">Или</div>
+          <input class="modal-input" type="text" placeholder="Email">
+          <button class="default-btn modal-form-btn">Отправить</button>
+        </form>
+      </div>
+    </div>
+    <div class="modal modal-product" data-modal="product-modal">
+      <div class="modal-bg"></div>
+      <div class="modal-body">
+        <div class="modal-close"></div>
+        <div class="modal-product-slider-wrap">
+          <div class="modal-product-slider">
+            <div class="modal-product-slider-elem"><img class="modal-product-slider-img" src="style/img/product-img-1.jpg" alt=""></div>
+            <div class="modal-product-slider-elem"><img class="modal-product-slider-img" src="style/img/product-img-1.jpg" alt=""></div>
+            <div class="modal-product-slider-elem"><img class="modal-product-slider-img" src="style/img/product-img-1.jpg" alt=""></div>
+            <div class="modal-product-slider-elem"><img class="modal-product-slider-img" src="style/img/product-img-1.jpg" alt=""></div>
+            <div class="modal-product-slider-elem"><img class="modal-product-slider-img" src="style/img/product-img-1.jpg" alt=""></div>
+            <div class="modal-product-slider-elem"><img class="modal-product-slider-img" src="style/img/product-img-1.jpg" alt=""></div>
+            <div class="modal-product-slider-elem"><img class="modal-product-slider-img" src="style/img/product-img-1.jpg" alt=""></div>
+            <div class="modal-product-slider-elem"><img class="modal-product-slider-img" src="style/img/product-img-1.jpg" alt=""></div>
+          </div>
+          <div class="modal-product-slider-nav">
+            <div class="modal-product-slider-nav-elem"><img class="modal-product-slider-nav-img" src="style/img/product-img-1.jpg" alt=""></div>
+            <div class="modal-product-slider-nav-elem"><img class="modal-product-slider-nav-img" src="style/img/product-img-1.jpg" alt=""></div>
+            <div class="modal-product-slider-nav-elem"><img class="modal-product-slider-nav-img" src="style/img/product-img-1.jpg" alt=""></div>
+            <div class="modal-product-slider-nav-elem"><img class="modal-product-slider-nav-img" src="style/img/product-img-1.jpg" alt=""></div>
+            <div class="modal-product-slider-nav-elem"><img class="modal-product-slider-nav-img" src="style/img/product-img-1.jpg" alt=""></div>
+            <div class="modal-product-slider-nav-elem"><img class="modal-product-slider-nav-img" src="style/img/product-img-1.jpg" alt=""></div>
+            <div class="modal-product-slider-nav-elem"><img class="modal-product-slider-nav-img" src="style/img/product-img-1.jpg" alt=""></div>
+            <div class="modal-product-slider-nav-elem"><img class="modal-product-slider-nav-img" src="style/img/product-img-1.jpg" alt=""></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal modal-faq" data-modal="faq-modal">
+      <div class="modal-bg"></div>
+      <div class="modal-body">
+        <div class="modal-close"></div>
+        <div class="modal-faq-heading">Название вопроса</div>
+        <p class="custom-text">
+          Ретро-дизайн с современным кроем. Две раздвижные двери, три отделения с 
+          полками. Яркие контрастные внутренние вставки окрашенные эмалью на 
+          фоне натуральной древесины придают ему особый вид.
+        </p>
+        <div class="custom-list-wrap">
+          <div class="custom-list-title">Список:</div>
+          <ol class="custom-list">
+            <li>Первый пункт</li>
+            <li>Второй пункт</li>
+            <li>Третий пункт</li>
+            <li>Четвертый пункт</li>
+            <li>Пятый пункт</li>
+            <li>Особая привелегия</li>
+          </ol>
+        </div>
+        <p class="custom-text">
+          Ретро-дизайн с современным кроем. Две раздвижные двери, три отделения с 
+          полками. Яркие контрастные внутренние вставки окрашенные эмалью на 
+          фоне натуральной древесины придают ему особый вид.
+        </p>
+      </div>
+    </div>
+    <div class="modal modal-quick">
+      <div class="modal-bg"></div>
+      <div class="modal-body">
+        <div class="modal-close"></div>
+        <div class="modal-heading">Быстрый заказ</div>
+        <div class="modal-description">
+           Отправьте нам свой телефон, в ближайшее время мы с 
+          Вами свяжемся для уточнения всех деталей.
+        </div>
+        <div class="modal-form">
+          <input class="modal-input" type="text" placeholder="Имя">
+          <input class="modal-input" type="text" placeholder="Телефон">
+          <button class="default-btn modal-form-btn">Заказать</button>
+        </div>
+      </div>
+    </div>
+    <div class="modal modal-order">
+      <div class="modal-bg"></div>
+      <div class="modal-body">
+        <div class="modal-close"></div>
+        <div class="modal-heading">Заказ оформлен</div>
+        <div class="modal-description">
+          Ваш заказ оформлен! Информация по доставке придет 
+          на почту в течение 5 минут!
+        </div><a class="default-btn modal-order-back-btn" href="">Вернуться к покупкам</a>
+      </div>
+    </div>
+    <div class="modal modal-terms">
+      <div class="modal-bg"></div>
+      <div class="modal-body">
+        <div class="modal-close"></div>
+        <div class="modal-faq-heading">Условия работы</div>
+        <p class="custom-text">
+          Ретро-дизайн с современным кроем. Две раздвижные двери, три отделения с 
+          полками. Яркие контрастные внутренние вставки окрашенные эмалью на 
+          фоне натуральной древесины придают ему особый вид.
+        </p>
+        <div class="custom-list-wrap">
+          <div class="custom-list-title">Список:</div>
+          <ol class="custom-list">
+            <li>Первый пункт</li>
+            <li>Второй пункт</li>
+            <li>Третий пункт</li>
+            <li>Четвертый пункт</li>
+            <li>Пятый пункт</li>
+            <li>Особая привелегия</li>
+          </ol>
+        </div>
+        <p class="custom-text">
+          Ретро-дизайн с современным кроем. Две раздвижные двери, три отделения с 
+          полками. Яркие контрастные внутренние вставки окрашенные эмалью на 
+          фоне натуральной древесины придают ему особый вид.
+        </p><a class="default-btn modal-terms-back-btn" href="">Вернуться к покупкам</a>
+      </div>
+    </div>
+    <header class="header">
+      <div class="header-wrap">
+        <div class="header-top"><a class="header-number" href="tel:+79697775683">+ 7 969 777 5683</a>
+          <div class="header-logo"><img src="style/img/icon/logo-wht.svg" alt=""></div>
+          <div class="header-buttons">
+            <div class="header-search">
+              <div class="header-search-btn"><img src="style/img/icon/search-wht-icon.svg" alt=""></div>
+              <form class="header-search-form" action="">
+                <input class="header-search-input" type="text" placeholder="Поиск">
+                <div class="header-search-close"><img src="style/img/icon/cross-icon.svg" alt=""></div>
+              </form>
+            </div>
+            <div class="header-cart">
+              <div class="header-cart-btn"><img src="style/img/icon/cart-wht-icon.svg" alt="">
+                <div class="header-cart-val">2</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header-bottom">
+          <nav class="header-nav">
+            <ul class="header-nav-list">
+              <li><a class="header-nav-link" href=""> <span class="header-nav-link-text">Каталог</span></a></li>
+              <li><a class="header-nav-link" href=""> <span class="header-nav-link-text">Коллекции</span></a></li>
+              <li><a class="header-nav-link" href=""> <span class="header-nav-link-text">Индивидуальные заказы</span></a></li>
+              <li>
+                <div class="header-nav-link header-nav-about"> <span class="header-nav-link-text">О нас</span>
+                  <div class="header-nav-dropdown-wrap">
+                    <div class="header-nav-dropdown"><a class="header-nav-dropdown-link" href="">О нас</a><a class="header-nav-dropdown-link" href="">Видео о нас</a><a class="header-nav-dropdown-link" href="">Фото шоурума</a><a class="header-nav-dropdown-link" href="">Видео шоурума</a><a class="header-nav-dropdown-link" href="">Портфолио</a></div>
+                  </div>
+                </div>
+              </li>
+              <li><a class="header-nav-link" href=""> <span class="header-nav-link-text">Как выбрать мебель</span></a></li>
+              <li><a class="header-nav-link" href=""> <span class="header-nav-link-text">Сотрудничество</span></a></li>
+              <li><a class="header-nav-link" href=""> <span class="header-nav-link-text">Доставка и оплата</span></a></li>
+              <li><a class="header-nav-link" href=""> <span class="header-nav-link-text">Контакты</span></a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="modal-cart">
+          <div class="modal-cart-close"></div>
+          <div class="modal-cart-elem">
+            <div class="modal-cart-delete"></div>
+            <div class="modal-cart-img-box"><img class="modal-cart-img" src="style/img/cart-modal-img.jpg" alt=""></div>
+            <div class="modal-cart-info"><a class="modal-cart-info-name" href="">Обувной шкаф Contorno</a>
+              <div class="modal-cart-info-size">80х35х87.5 см</div>
+              <div class="modal-cart-info-price">57800 ₽</div>
+            </div>
+          </div>
+          <div class="modal-cart-elem">
+            <div class="modal-cart-delete"></div>
+            <div class="modal-cart-img-box"><img class="modal-cart-img" src="style/img/cart-modal-img.jpg" alt=""></div>
+            <div class="modal-cart-info"><a class="modal-cart-info-name" href="">Обувной шкаф Contorno</a>
+              <div class="modal-cart-info-size">80х35х87.5 см</div>
+              <div class="modal-cart-info-price">57800 ₽</div>
+            </div>
+          </div>
+          <div class="modal-cart-all-price">
+            <div class="modal-cart-all-price-text">Итого:</div>
+            <div class="modal-cart-all-price-value">57800 ₽</div>
+          </div><a class="default-btn modal-cart-btn" href="">Оформить заказ</a>
+        </div>
+      </div>
+    </header>
+    <div class="wrapper-box">
+      <div class="wrapper">
+        <div class="wrapper-header">Список заказов</div>
+        <div class="order-list">
+          <div class="order-list-elem"> 
+            <div class="order-list-heading">
+              <div class="order-list-heading-l">
+                <div class="order-list-heading-value">1.</div>
+                <div class="order-list-heading-num">№ 345 </div>
+                <div class="order-list-heading-date">26.06.2020</div>
+              </div>
+              <div class="order-list-heading-r">
+                <div class="order-list-heading-price">57 800 ₽</div>
+                <div class="order-list-heading-arrow"></div>
+              </div>
+            </div>
+            <div class="order-list-dropdown">
+              <ul class="order-list-info">
+                <li class="order-list-info-elem">
+                  <div class="order-list-info-heading"><a class="order-list-info-name" href="">Витрина Bairo</a>
+                    <div class="order-list-info-price">57 800 ₽</div>
+                  </div>
+                  <div class="order-list-info-comment"></div>
+                </li>
+                <li class="order-list-info-elem">
+                  <div class="order-list-info-heading"><a class="order-list-info-name" href="">Коллекция Rocca</a>
+                    <div class="order-list-info-price">57 800 ₽</div>
+                  </div>
+                  <div class="order-list-info-comment"></div>
+                </li>
+                <li class="order-list-info-elem">
+                  <div class="order-list-info-heading"><a class="order-list-info-name" href="">Обувной шкаф Contorno</a>
+                    <div class="order-list-info-price">57 800 ₽</div>
+                  </div>
+                  <div class="order-list-info-comment">
+                    <p class="custom-text">
+                      Ретро-дизайн с современным кроем. Две раздвижные двери, 
+                      три отделения с полками. Яркие контрастные внутренние 
+                      вставки окрашенные эмалью на фоне натуральной древесины 
+                      придают ему особый вид.
+                    </p>
+                    <p class="custom-text">
+                      Этот современный медиа-блок не просто великолепно смотрится, 
+                      он также долговечен и функционален.
+                    </p>
+                    <p class="custom-text">
+                      Открытое пространство предлагает более чем достаточно 
+                      места для аудио, видео компонентов, в то время как два 
+                      оставшихся отделения имеют достаточно много места для 
+                      ваших коллекций. Ретро-дизайн с современным кроем. Две 
+                      раздвижные двери, три отделения с полками.
+                    </p>
+                    <p class="custom-text">
+                      Яркие контрастные внутренние вставки окрашенные эмалью 
+                      на фоне натуральной древесины придают ему особый вид.
+                    </p>
+                  </div>
+                </li>
+                <li class="order-list-info-elem">
+                  <div class="order-list-info-heading"><a class="order-list-info-name" href="">Бельевой комод Tivoli</a>
+                    <div class="order-list-info-price">57 800 ₽</div>
+                  </div>
+                  <div class="order-list-info-comment">
+                    <p class="custom-text">
+                      Ретро-дизайн с современным кроем. Две раздвижные двери, 
+                      три отделения с полками. Яркие контрастные внутренние 
+                      вставки окрашенные эмалью на фоне натуральной древесины 
+                      придают ему особый вид.
+                    </p>
+                    <p class="custom-text">
+                      Этот современный медиа-блок не просто великолепно смотрится, 
+                      он также долговечен и функционален.
+                    </p>
+                  </div>
+                </li>
+              </ul>
+              <div class="order-list-value">
+                <div class="order-list-value-item">
+                  <div class="order-list-value-text">Итого: </div>
+                  <div class="order-list-value-price">57800 ₽</div>
+                </div>
+                <div class="order-list-value-item">
+                  <div class="order-list-value-text">Скидка / Бонус:</div>
+                  <div class="order-list-value-price">0 ₽</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="order-list-elem"> 
+            <div class="order-list-heading">
+              <div class="order-list-heading-l">
+                <div class="order-list-heading-value">2.</div>
+                <div class="order-list-heading-num">№ 345 </div>
+                <div class="order-list-heading-date">26.06.2020</div>
+              </div>
+              <div class="order-list-heading-r">
+                <div class="order-list-heading-price">57 800 ₽</div>
+                <div class="order-list-heading-arrow"></div>
+              </div>
+            </div>
+            <div class="order-list-dropdown">
+              <ul class="order-list-info">
+                <li class="order-list-info-elem">
+                  <div class="order-list-info-heading"><a class="order-list-info-name" href="">Витрина Bairo</a>
+                    <div class="order-list-info-price">57 800 ₽</div>
+                  </div>
+                  <div class="order-list-info-comment"></div>
+                </li>
+                <li class="order-list-info-elem">
+                  <div class="order-list-info-heading"><a class="order-list-info-name" href="">Коллекция Rocca</a>
+                    <div class="order-list-info-price">57 800 ₽</div>
+                  </div>
+                  <div class="order-list-info-comment"></div>
+                </li>
+                <li class="order-list-info-elem">
+                  <div class="order-list-info-heading"><a class="order-list-info-name" href="">Обувной шкаф Contorno</a>
+                    <div class="order-list-info-price">57 800 ₽</div>
+                  </div>
+                  <div class="order-list-info-comment">
+                    <p class="custom-text">
+                      Ретро-дизайн с современным кроем. Две раздвижные двери, 
+                      три отделения с полками. Яркие контрастные внутренние 
+                      вставки окрашенные эмалью на фоне натуральной древесины 
+                      придают ему особый вид.
+                    </p>
+                    <p class="custom-text">
+                      Этот современный медиа-блок не просто великолепно смотрится, 
+                      он также долговечен и функционален.
+                    </p>
+                    <p class="custom-text">
+                      Открытое пространство предлагает более чем достаточно 
+                      места для аудио, видео компонентов, в то время как два 
+                      оставшихся отделения имеют достаточно много места для 
+                      ваших коллекций. Ретро-дизайн с современным кроем. Две 
+                      раздвижные двери, три отделения с полками.
+                    </p>
+                    <p class="custom-text">
+                      Яркие контрастные внутренние вставки окрашенные эмалью 
+                      на фоне натуральной древесины придают ему особый вид.
+                    </p>
+                  </div>
+                </li>
+                <li class="order-list-info-elem">
+                  <div class="order-list-info-heading"><a class="order-list-info-name" href="">Бельевой комод Tivoli</a>
+                    <div class="order-list-info-price">57 800 ₽</div>
+                  </div>
+                  <div class="order-list-info-comment">
+                    <p class="custom-text">
+                      Ретро-дизайн с современным кроем. Две раздвижные двери, 
+                      три отделения с полками. Яркие контрастные внутренние 
+                      вставки окрашенные эмалью на фоне натуральной древесины 
+                      придают ему особый вид.
+                    </p>
+                    <p class="custom-text">
+                      Этот современный медиа-блок не просто великолепно смотрится, 
+                      он также долговечен и функционален.
+                    </p>
+                  </div>
+                </li>
+              </ul>
+              <div class="order-list-value">
+                <div class="order-list-value-item">
+                  <div class="order-list-value-text">Итого: </div>
+                  <div class="order-list-value-price">57800 ₽</div>
+                </div>
+                <div class="order-list-value-item">
+                  <div class="order-list-value-text">Скидка / Бонус:</div>
+                  <div class="order-list-value-price">0 ₽</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="order-list-elem"> 
+            <div class="order-list-heading">
+              <div class="order-list-heading-l">
+                <div class="order-list-heading-value">3.</div>
+                <div class="order-list-heading-num">№ 345 </div>
+                <div class="order-list-heading-date">26.06.2020</div>
+              </div>
+              <div class="order-list-heading-r">
+                <div class="order-list-heading-price">57 800 ₽</div>
+                <div class="order-list-heading-arrow"></div>
+              </div>
+            </div>
+            <div class="order-list-dropdown">
+              <ul class="order-list-info">
+                <li class="order-list-info-elem">
+                  <div class="order-list-info-heading"><a class="order-list-info-name" href="">Витрина Bairo</a>
+                    <div class="order-list-info-price">57 800 ₽</div>
+                  </div>
+                  <div class="order-list-info-comment"></div>
+                </li>
+                <li class="order-list-info-elem">
+                  <div class="order-list-info-heading"><a class="order-list-info-name" href="">Коллекция Rocca</a>
+                    <div class="order-list-info-price">57 800 ₽</div>
+                  </div>
+                  <div class="order-list-info-comment"></div>
+                </li>
+                <li class="order-list-info-elem">
+                  <div class="order-list-info-heading"><a class="order-list-info-name" href="">Обувной шкаф Contorno</a>
+                    <div class="order-list-info-price">57 800 ₽</div>
+                  </div>
+                  <div class="order-list-info-comment">
+                    <p class="custom-text">
+                      Ретро-дизайн с современным кроем. Две раздвижные двери, 
+                      три отделения с полками. Яркие контрастные внутренние 
+                      вставки окрашенные эмалью на фоне натуральной древесины 
+                      придают ему особый вид.
+                    </p>
+                    <p class="custom-text">
+                      Этот современный медиа-блок не просто великолепно смотрится, 
+                      он также долговечен и функционален.
+                    </p>
+                    <p class="custom-text">
+                      Открытое пространство предлагает более чем достаточно 
+                      места для аудио, видео компонентов, в то время как два 
+                      оставшихся отделения имеют достаточно много места для 
+                      ваших коллекций. Ретро-дизайн с современным кроем. Две 
+                      раздвижные двери, три отделения с полками.
+                    </p>
+                    <p class="custom-text">
+                      Яркие контрастные внутренние вставки окрашенные эмалью 
+                      на фоне натуральной древесины придают ему особый вид.
+                    </p>
+                  </div>
+                </li>
+                <li class="order-list-info-elem">
+                  <div class="order-list-info-heading"><a class="order-list-info-name" href="">Бельевой комод Tivoli</a>
+                    <div class="order-list-info-price">57 800 ₽</div>
+                  </div>
+                  <div class="order-list-info-comment">
+                    <p class="custom-text">
+                      Ретро-дизайн с современным кроем. Две раздвижные двери, 
+                      три отделения с полками. Яркие контрастные внутренние 
+                      вставки окрашенные эмалью на фоне натуральной древесины 
+                      придают ему особый вид.
+                    </p>
+                    <p class="custom-text">
+                      Этот современный медиа-блок не просто великолепно смотрится, 
+                      он также долговечен и функционален.
+                    </p>
+                  </div>
+                </li>
+              </ul>
+              <div class="order-list-value">
+                <div class="order-list-value-item">
+                  <div class="order-list-value-text">Итого: </div>
+                  <div class="order-list-value-price">57800 ₽</div>
+                </div>
+                <div class="order-list-value-item">
+                  <div class="order-list-value-text">Скидка / Бонус:</div>
+                  <div class="order-list-value-price">0 ₽</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="order-list-elem"> 
+            <div class="order-list-heading">
+              <div class="order-list-heading-l">
+                <div class="order-list-heading-value">4.</div>
+                <div class="order-list-heading-num">№ 345 </div>
+                <div class="order-list-heading-date">26.06.2020</div>
+              </div>
+              <div class="order-list-heading-r">
+                <div class="order-list-heading-price">57 800 ₽</div>
+                <div class="order-list-heading-arrow"></div>
+              </div>
+            </div>
+            <div class="order-list-dropdown">
+              <ul class="order-list-info">
+                <li class="order-list-info-elem">
+                  <div class="order-list-info-heading"><a class="order-list-info-name" href="">Витрина Bairo</a>
+                    <div class="order-list-info-price">57 800 ₽</div>
+                  </div>
+                  <div class="order-list-info-comment"></div>
+                </li>
+                <li class="order-list-info-elem">
+                  <div class="order-list-info-heading"><a class="order-list-info-name" href="">Коллекция Rocca</a>
+                    <div class="order-list-info-price">57 800 ₽</div>
+                  </div>
+                  <div class="order-list-info-comment"></div>
+                </li>
+                <li class="order-list-info-elem">
+                  <div class="order-list-info-heading"><a class="order-list-info-name" href="">Обувной шкаф Contorno</a>
+                    <div class="order-list-info-price">57 800 ₽</div>
+                  </div>
+                  <div class="order-list-info-comment">
+                    <p class="custom-text">
+                      Ретро-дизайн с современным кроем. Две раздвижные двери, 
+                      три отделения с полками. Яркие контрастные внутренние 
+                      вставки окрашенные эмалью на фоне натуральной древесины 
+                      придают ему особый вид.
+                    </p>
+                    <p class="custom-text">
+                      Этот современный медиа-блок не просто великолепно смотрится, 
+                      он также долговечен и функционален.
+                    </p>
+                    <p class="custom-text">
+                      Открытое пространство предлагает более чем достаточно 
+                      места для аудио, видео компонентов, в то время как два 
+                      оставшихся отделения имеют достаточно много места для 
+                      ваших коллекций. Ретро-дизайн с современным кроем. Две 
+                      раздвижные двери, три отделения с полками.
+                    </p>
+                    <p class="custom-text">
+                      Яркие контрастные внутренние вставки окрашенные эмалью 
+                      на фоне натуральной древесины придают ему особый вид.
+                    </p>
+                  </div>
+                </li>
+                <li class="order-list-info-elem">
+                  <div class="order-list-info-heading"><a class="order-list-info-name" href="">Бельевой комод Tivoli</a>
+                    <div class="order-list-info-price">57 800 ₽</div>
+                  </div>
+                  <div class="order-list-info-comment">
+                    <p class="custom-text">
+                      Ретро-дизайн с современным кроем. Две раздвижные двери, 
+                      три отделения с полками. Яркие контрастные внутренние 
+                      вставки окрашенные эмалью на фоне натуральной древесины 
+                      придают ему особый вид.
+                    </p>
+                    <p class="custom-text">
+                      Этот современный медиа-блок не просто великолепно смотрится, 
+                      он также долговечен и функционален.
+                    </p>
+                  </div>
+                </li>
+              </ul>
+              <div class="order-list-value">
+                <div class="order-list-value-item">
+                  <div class="order-list-value-text">Итого: </div>
+                  <div class="order-list-value-price">57800 ₽</div>
+                </div>
+                <div class="order-list-value-item">
+                  <div class="order-list-value-text">Скидка / Бонус:</div>
+                  <div class="order-list-value-price">0 ₽</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="order-list-elem"> 
+            <div class="order-list-heading">
+              <div class="order-list-heading-l">
+                <div class="order-list-heading-value">5.</div>
+                <div class="order-list-heading-num">№ 345 </div>
+                <div class="order-list-heading-date">26.06.2020</div>
+              </div>
+              <div class="order-list-heading-r">
+                <div class="order-list-heading-price">57 800 ₽</div>
+                <div class="order-list-heading-arrow"></div>
+              </div>
+            </div>
+            <div class="order-list-dropdown">
+              <ul class="order-list-info">
+                <li class="order-list-info-elem">
+                  <div class="order-list-info-heading"><a class="order-list-info-name" href="">Витрина Bairo</a>
+                    <div class="order-list-info-price">57 800 ₽</div>
+                  </div>
+                  <div class="order-list-info-comment"></div>
+                </li>
+                <li class="order-list-info-elem">
+                  <div class="order-list-info-heading"><a class="order-list-info-name" href="">Коллекция Rocca</a>
+                    <div class="order-list-info-price">57 800 ₽</div>
+                  </div>
+                  <div class="order-list-info-comment"></div>
+                </li>
+                <li class="order-list-info-elem">
+                  <div class="order-list-info-heading"><a class="order-list-info-name" href="">Обувной шкаф Contorno</a>
+                    <div class="order-list-info-price">57 800 ₽</div>
+                  </div>
+                  <div class="order-list-info-comment">
+                    <p class="custom-text">
+                      Ретро-дизайн с современным кроем. Две раздвижные двери, 
+                      три отделения с полками. Яркие контрастные внутренние 
+                      вставки окрашенные эмалью на фоне натуральной древесины 
+                      придают ему особый вид.
+                    </p>
+                    <p class="custom-text">
+                      Этот современный медиа-блок не просто великолепно смотрится, 
+                      он также долговечен и функционален.
+                    </p>
+                    <p class="custom-text">
+                      Открытое пространство предлагает более чем достаточно 
+                      места для аудио, видео компонентов, в то время как два 
+                      оставшихся отделения имеют достаточно много места для 
+                      ваших коллекций. Ретро-дизайн с современным кроем. Две 
+                      раздвижные двери, три отделения с полками.
+                    </p>
+                    <p class="custom-text">
+                      Яркие контрастные внутренние вставки окрашенные эмалью 
+                      на фоне натуральной древесины придают ему особый вид.
+                    </p>
+                  </div>
+                </li>
+                <li class="order-list-info-elem">
+                  <div class="order-list-info-heading"><a class="order-list-info-name" href="">Бельевой комод Tivoli</a>
+                    <div class="order-list-info-price">57 800 ₽</div>
+                  </div>
+                  <div class="order-list-info-comment">
+                    <p class="custom-text">
+                      Ретро-дизайн с современным кроем. Две раздвижные двери, 
+                      три отделения с полками. Яркие контрастные внутренние 
+                      вставки окрашенные эмалью на фоне натуральной древесины 
+                      придают ему особый вид.
+                    </p>
+                    <p class="custom-text">
+                      Этот современный медиа-блок не просто великолепно смотрится, 
+                      он также долговечен и функционален.
+                    </p>
+                  </div>
+                </li>
+              </ul>
+              <div class="order-list-value">
+                <div class="order-list-value-item">
+                  <div class="order-list-value-text">Итого: </div>
+                  <div class="order-list-value-price">57800 ₽</div>
+                </div>
+                <div class="order-list-value-item">
+                  <div class="order-list-value-text">Скидка / Бонус:</div>
+                  <div class="order-list-value-price">0 ₽</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bonus">
+        <div class="bonus-wrap">
+          <div class="bonus-item">
+            <div class="bonus-text">Ваша текущая скидка/бонус на серийные изделия</div>
+            <div class="bonus-value">00%</div>
+          </div>
+          <div class="bonus-item">
+            <div class="bonus-text">Ваша текущая скидка/бонус на индивидуальные изделия</div>
+            <div class="bonus-value">00%</div>
+          </div>
+        </div>
+      </div>
+      <div class="links-wrap">
+        <div class="default-btn btn-inv links-btn terms-btn">Условия работы</div><a class="default-btn btn-inv links-btn" href="">3D модели</a>
+      </div><a class="inst inst-single" href="">
+        <div class="inst-wrap">
+          <div class="inst-title">
+            <div class="inst-logo"><img src="style/img/icon/inst-icon.svg" alt=""></div>
+            <div class="inst-text">Ambicioni</div>
+          </div>
+        </div></a>
+      <footer class="footer">
+        <div class="footer-wrap"> 
+          <div class="footer-left"><a class="footer-logo" href=""><img src="style/img/icon/logo.svg" alt=""></a><a class="footer-phone" href="tel:+79697775683">+ 7 969 777 5683</a><span class="footer-copyright">© 2020/Все права защищены</span></div>
+          <div class="footer-right">
+            <div class="footer-top">
+              <div class="footer-elem">
+                <div class="footer-heading">Каталог</div>
+                <ul class="footer-list">
+                  <li><a class="footer-link" href="">Комоды, тв-тумбы</a></li>
+                  <li><a class="footer-link" href="">Витрины и буфеты</a></li>
+                  <li><a class="footer-link" href="">Мебель в спальню</a></li>
+                  <li><a class="footer-link" href="">Шкафы</a></li>
+                  <li><a class="footer-link" href="">Консоли и столы</a></li>
+                  <li><a class="footer-link" href="">Мебель в ванную</a></li>
+                  <li><a class="footer-link" href="">Зеркала</a></li>
+                </ul>
+              </div>
+              <div class="footer-elem">
+                <div class="footer-heading">Коллекции</div>
+                <ul class="footer-list">
+                  <li><a class="footer-link" href="">Aura</a></li>
+                  <li><a class="footer-link" href="">Bairo</a></li>
+                  <li><a class="footer-link" href="">Bernetto</a></li>
+                  <li><a class="footer-link" href="">Fornetti</a></li>
+                </ul>
+              </div>
+              <div class="footer-elem">
+                <div class="footer-heading">Индивидуальные заказы</div>
+                <ul class="footer-list">
+                  <li><a class="footer-link" href="">Заказ №1</a></li>
+                  <li><a class="footer-link" href="">Заказ №2</a></li>
+                  <li><a class="footer-link" href="">Заказ №3</a></li>
+                  <li><a class="footer-link" href="">Заказ №4</a></li>
+                </ul>
+              </div>
+              <div class="footer-elem">
+                <div class="footer-heading">О нас</div>
+                <ul class="footer-list">
+                  <li><a class="footer-link" href="">Видео</a></li>
+                  <li><a class="footer-link" href="">Мы на рынке</a></li>
+                  <li><a class="footer-link" href="">Фото шоурума</a></li>
+                  <li><a class="footer-link" href="">Видео шоурума</a></li>
+                  <li><a class="footer-link" href="">Портфолио</a></li>
+                </ul>
+              </div>
+              <div class="footer-elem">
+                <div class="footer-heading">Как выбрать мебель</div>
+                <ul class="footer-list">
+                  <li><a class="footer-link" href="">Пункт №1</a></li>
+                  <li><a class="footer-link" href="">Пункт №2</a></li>
+                  <li><a class="footer-link" href="">Пункт №3</a></li>
+                  <li><a class="footer-link" href="">Пункт №4</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="footer-bottom">
+              <div class="footer-elem"><a class="footer-heading" href="">Сотрудничество</a></div>
+              <div class="footer-elem"><a class="footer-heading" href="">Доставка и оплата</a></div>
+              <div class="footer-elem"><a class="footer-heading" href="">Контакты</a></div>
+              <div class="footer-elem"><a class="footer-link" href="">Правила пользования сайтом</a></div>
+              <div class="footer-elem"><a class="footer-link" href="">Политика конфиденциальности</a></div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="./style/js/plugin/jquery-3.4.1.min.js"></script>
+    <script src="./style/js/plugin/jquery-ui.min.js"></script>
+    <script src="./style/js/plugin/jquery.ui.touch-punch.min.js"></script>
+    <script src="./style/js/plugin/slick.min.js"></script>
+    <script src="./style/js/plugin/select2.min.js"></script>
+    <script src="./style/js/plugin/select2-ru.js"></script>
+    <script src="./style/js/plugin/jquery.fancybox.min.js"></script>
+    <script src="./style/js/plugin/jquery.mask.min.js"></script>
+    <script src="./style/js/plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="./style/js/plugin/jquery.validate.min.js"></script>
+    <script src="./style/js/main.js"></script>
+  </body>
+</html>

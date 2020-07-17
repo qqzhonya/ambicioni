@@ -271,6 +271,8 @@ $(function() {
 				$('.modal-quick').fadeIn();
 			} else if (button.hasClass('order-btn')) {
 				$('.modal-order').fadeIn();
+			} else if (button.hasClass('terms-btn')) {
+				$('.modal-terms').fadeIn();
 			}
 		})
 	}	
@@ -278,8 +280,9 @@ $(function() {
 	initModal($('.product-slider-elem'));
 	initModal($('.product-discussion-btn'));
 	initModal($('.product-faq-btn'));
-	initModal($('.cart-menu-quick'))
-	initModal($('.order-btn'))
+	initModal($('.cart-menu-quick'));
+	initModal($('.order-btn'));
+	initModal($('.terms-btn'))
 
 	$('.modal-close, .modal-bg').click(function() {
 		$('.modal').fadeOut();
@@ -346,14 +349,52 @@ $(function() {
 	//
 
 	//
-	// Contact map
+	// About media fancybox
 	//
 
-	// function initContactMap() {
-
-	// }
+	$('.about-media-elem').fancybox();
 
 	//
-	// Contact map end
+	// About media fancybox end
+	//
+
+	//
+	// Cooperation change form
+	//
+
+	$('.cooperation-form-radio').click(function() {
+		$(this).toggleClass('active');
+
+		if($(this).hasClass('cooperation-form-radio-design')) {
+			$('.cooperation-form-dealer').removeClass('active');
+
+			$('.cooperation-form-design').addClass('active');
+		} else if($(this).hasClass('cooperation-form-radio-dealer')) {
+			$('.cooperation-form-design').removeClass('active');
+
+			$('.cooperation-form-dealer').addClass('active');
+		}
+	});
+
+	//
+	// Cooperation change form end
+	//
+
+	//
+	// Order list info
+	//
+
+		$('.order-list-heading').click(function() {
+			$(this).parent().toggleClass('active').siblings().removeClass('active');
+
+			$('.order-list-dropdown').slideUp()
+
+			if($(this).parent().hasClass('active')) {
+				$(this).parent().find('.order-list-dropdown').slideDown();;
+			}
+		})
+
+	//
+	// Order list info end
 	//
 });

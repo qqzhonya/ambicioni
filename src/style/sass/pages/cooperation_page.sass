@@ -1,0 +1,135 @@
+.cooperation
+	&-wrap
+		+flex
+		margin:
+			top: 60px
+	
+	&-img-wrap
+		width: 40%
+	
+	&-info
+		margin:
+			top: 20px
+		padding:
+			left: 60px
+		width: 60%
+	
+	&-form
+		margin:
+			top: 100px
+		padding: 60px 50px 70px 50px
+		background-color: #F4F4F4
+	
+		&-title
+			margin:
+				bottom: 35px
+			font-size: 27px
+			line-height: 36px
+			text-transform: uppercase
+		
+		&-radio
+			&-wrap
+				+flex
+				
+			&-elem
+				margin:
+					right: 40px
+			
+			&-label
+				font-size: 18px
+		
+		&-wrap
+			display: none
+			margin: 0 -15px
+				top: 20px
+			+flex-wrap(wrap)
+		
+			&.active 
+				+flex
+
+		&-elem
+			padding: 0 15px
+				top: 15px
+			width: 50%
+
+		&-input
+			padding: 13px 25px
+			width: 100%
+			font-size: 18px
+			line-height: 22px
+			color: $accent-dark-color
+			border: 1px solid transparent
+			background-color: $white
+			+prefix(transition, $default-transition)
+
+			&:focus
+				border-color: $accent-dark-color
+
+			+placeholder()
+				color: $font-light-color
+		
+		&-btn
+			padding: 12px 15px
+			max-width: 100%
+			font-size: 18px
+			line-height: 22px 
+
+		.cooperation-form-radio[type="radio"]:checked,
+		.cooperation-form-radio[type="radio"]:not(:checked)
+			position: absolute
+			height: 0
+			width: 0
+			left: -9999px
+
+		.cooperation-form-radio[type="radio"]:checked + label,
+		.cooperation-form-radio[type="radio"]:not(:checked) + label
+			position: relative
+			padding-left: 43px
+			cursor: pointer
+			line-height: 24px
+			font-size: 16px
+			font-weight: 300
+			display: inline-block
+			color: #666
+
+		.cooperation-form-radio[type="radio"]:checked + label:before,
+		.cooperation-form-radio[type="radio"]:not(:checked) + label:before
+			content: ''
+			position: absolute
+			left: 0
+			top: -2px
+			width: 24px
+			height: 24px
+			border: 1px solid transparent
+			border-radius: 100px
+			background-color: $white
+
+		.cooperation-form-radio[type="radio"]:checked + label:after,
+		.cooperation-form-radio[type="radio"]:not(:checked) + label:after
+			content: ''
+			width: 24px
+			height: 24px
+			background-image: url(../img/icon/checkmark-icon.svg)
+			background-size: cover
+			background-position: center center
+			background-repeat: no-repeat
+			position: absolute
+			top: -2px
+			left: 2px
+			-webkit-transition: all 0.2s ease
+			transition: all 0.2s ease
+
+		.cooperation-form-radio[type="radio"]:not(:checked) + label:after
+			opacity: 0
+			-webkit-transform: scale(0)
+			transform: scale(0)
+
+		.cooperation-form-radio[type="radio"]:checked + label:before
+			background-color: accent-color
+
+		.cooperation-form-radio[type="radio"]:checked + label:after
+			opacity: 1
+			-webkit-transform: scale(1)
+			transform: scale(1)
+
+		
