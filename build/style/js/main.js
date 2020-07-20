@@ -26,8 +26,8 @@ $(function() {
 		speed: 2000,
 		fade: true,
 		cssEase: 'linear',
-		autoplay: true,
-  	autoplaySpeed: 2500
+		autoplay: false,
+  	autoplaySpeed: 2000
 	});
 	
 	//
@@ -185,17 +185,17 @@ $(function() {
 	//
 
 	//
-	// Product tab 
+	// Tab 
 	//
 
-	$('ul.product-tab-nav').on('click', 'li:not(.active)', function() {
+	$('ul.tab-nav').on('click', 'li:not(.active)', function() {
     $(this)
       .addClass('active').siblings().removeClass('active')
-      .closest('div.product-tab').find('div.product-tab-elem').removeClass('active').eq($(this).index()).addClass('active');
+      .closest('div.tab').find('div.tab-elem').removeClass('active').eq($(this).index()).addClass('active');
   });
 
 	//
-	// Product tab end
+	// Tab end
 	//
 
 	//
@@ -246,51 +246,41 @@ $(function() {
 	//
 
 	//
-	// Open modal
+	// Modal
 	//
 
 	function initModal(button) {
 		button.click(function (event) {
-			// var buttonVal = $(this).data("modal-btn");
-			// var showModal = $(document).find('.modal').data("modal", buttonVal);
-
-			// console.log(showModal);
-			
-			// showModal.fadeIn();
+			var buttonVal = $(this).data("modal-btn");
+			var showModal = $(".modal").filter('[data-modal = "' + buttonVal +'"]');
 
 			$('body').addClass('modal-active');
 			
-			if(button.hasClass('product-slider-elem')) {
-				$('.modal-product').fadeIn();
+			showModal.fadeIn();
+
+			if($('.modal').filter('[data-modal = "product-modal"]')) {
 				modalProduct();
-			} else if (button.hasClass('product-discussion-btn')) {
-				$('.modal-discussion').fadeIn();
-			} else if (button.hasClass('product-faq-btn')) {
-				$('.modal-faq').fadeIn();
-			} else if (button.hasClass('cart-menu-quick')) {
-				$('.modal-quick').fadeIn();
-			} else if (button.hasClass('order-btn')) {
-				$('.modal-order').fadeIn();
-			} else if (button.hasClass('terms-btn')) {
-				$('.modal-terms').fadeIn();
 			}
 		})
 	}	
 
-	initModal($('.product-slider-elem'));
-	initModal($('.product-discussion-btn'));
-	initModal($('.product-faq-btn'));
-	initModal($('.cart-menu-quick'));
-	initModal($('.order-btn'));
-	initModal($('.terms-btn'))
+	initModal($('.modal-btn'));	
 
 	$('.modal-close, .modal-bg').click(function() {
 		$('.modal').fadeOut();
 		$('body').removeClass('modal-active');
 	})
 
+	document.onkeydown = function(evt) {
+    evt = evt || window.event;
+    if (evt.keyCode == 27) {
+			$('.modal').fadeOut();
+			$('body').removeClass('modal-active');
+    }
+	};
+
 	//
-	// Open modal end
+	// Modal end
 	//
 
 	//
@@ -397,4 +387,33 @@ $(function() {
 	//
 	// Order list info end
 	//
+
+	//
+	// Mobile menu
+	//
+
+	$('.header-menu-btn').click(function() {
+		$(this).toggleClass('active');
+
+		if($(this).hasClass('active')) {
+			$('.mobile-menu').show();
+		} else {
+			$('.mobile-menu').hide();
+		}
+	});
+
+	$('.mobile-menu-nav-about').click(function() {
+		$(this).toggleClass('active');
+
+		if($(this).hasClass('active')) {
+			$('.mobile-menu-nav-submenu').slideDown();
+		} else {
+			$('.mobile-menu-nav-submenu').slideUp();
+		}
+	});
+
+	//
+	// Mobile menu end
+	//
+
 });

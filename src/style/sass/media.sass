@@ -1,0 +1,53 @@
+@media screen and (max-width: 1030px)
+	.header 
+		&-bottom
+			display: none
+
+		&-menu-btn
+			display: block
+
+	.price-filter
+		&-form 
+			+flex-wrap(wrap)
+
+		&-elem,
+		&-elem:nth-child(1),
+		&-elem:nth-child(2),
+		&-elem:nth-child(3)
+			max-width: 100%
+	
+		&-elem:nth-child(1)
+			margin: 0
+
+		&-elem:nth-child(2)
+			margin: 0
+		
+		&-slider
+			margin: 0 auto
+				top: 35px
+		
+		&-input-wrap
+			+justify-content(center)
+		
+		&-buttons
+			margin:
+				top: 40px
+			+justify-content(center)
+
+@media screen and (max-width: 961px)
+	.wrapper 
+		&-header
+			margin:
+				top: 60px
+				bottom: 30px
+	
+	.footer
+		&-wrap
+			+flex-wrap(wrap)
+
+@media screen and (max-width: 761px)
+	.media
+		margin:
+			top: 0
+		&-elem
+			width: 50%

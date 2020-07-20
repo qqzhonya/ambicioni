@@ -168,6 +168,13 @@
 		color: $accent-dark-color
 		text-transform: uppercase
 	
+	&-big-heading
+		margin:
+			bottom: 25px
+		font-size: 22px
+		line-height: 26px
+		text-transform: uppercase
+
 	&-description
 		margin:
 			bottom: 35px
@@ -191,6 +198,34 @@
 			font-size: 18px
 			line-height: 22px
 
+		&-wrap
+			+flex
+			margin:
+				top: 25px
+			+justify-content(space-between)
+			+align-items(center)
+
+		&-remember
+			+flex
+
+			.checkbox[type="checkbox"]:checked + label:before,
+			.checkbox[type="checkbox"]:not(:checked) + label:before
+				background-color: #F4F4F4
+			
+			&-text
+				margin:
+					top: 5px
+					left: 15px
+				font-size: 14px
+
+		&-link
+			margin:
+				top: 4px
+			font-size: 14px
+			line-height: 17px
+			color: $accent-dark-color
+			text-decoration: underline
+
 	&-input
 		margin:
 			bottom: 15px
@@ -204,6 +239,36 @@
 	
 		+placeholder()
 			color: $font-light-color
+
+	&-wrap
+		&-buttons
+		 +flex
+		 margin: 0 -15px
+
+		&-btn
+			margin: 0 15px
+			padding: 13px
+				bottom: 12px
+			font-size: 18px
+			line-height: 22px
+
+.modal-log
+
+	.tab
+		&-nav
+			&-elem
+				width: 100%
+				text-align: center
+
+.modal-password 
+
+	.modal-description
+		margin:
+			bottom: 25px
+		
+	.modal-form-btn
+		margin:
+			top: 25px
 
 .modal-discussion
 	&-info
@@ -339,13 +404,6 @@
 	.modal-body
 		max-width: 1170px
 
-	&-heading
-		margin:
-			bottom: 25px
-		font-size: 22px
-		line-height: 26px
-		text-transform: uppercase
-
 .modal-order
 	
 	.modal-heading
@@ -365,3 +423,58 @@
 		max-width: 340px
 		font-size: 18px
 		line-height: 22px
+
+.mobile-menu
+	display: none
+	position: absolute
+	padding: 20px 15px
+	top: 138px
+	right: 0
+	background-color: $white
+	+box-shadow( 0px 0px 15px 5px rgba(128,128,128,0.2))
+	z-index: 200
+
+	.header-nav-link
+		color: $accent-dark-color
+
+	&-nav
+		
+		&-list
+			list-style-type: none
+
+			li
+				padding: 10px 0
+		
+		&-about
+			.header-nav-link-text
+				+flex
+				+justify-content(space-between)
+				+align-items(center)
+
+			&.active
+				.mobile-menu-nav-link-arrow
+					+prefix(transform, rotate(180deg))
+
+		&-link
+			&-arrow
+				margin:
+					top: -3px
+				width: 14px
+				height: 8px
+				background-image: url(../img/icon/arrow-down.svg)
+				+prefix(transition, $default-transition)
+		
+		&-submenu
+			display: none
+			margin:
+				top: 10px
+
+			&-link
+				display: block
+				padding: 5px 10px
+				font-size: 16px
+				color: $accent-dark-color
+
+				&:last-child
+					padding:
+						bottom: 0

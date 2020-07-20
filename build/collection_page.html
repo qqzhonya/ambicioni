@@ -21,6 +21,72 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="#F6CB52">
   </head>
   <body>
+    <div class="modal modal-log" data-modal="log-modal">
+      <div class="modal-bg"></div>
+      <div class="modal-body">
+        <div class="modal-close"></div>
+        <div class="tab">
+          <ul class="tab-nav">
+            <li class="tab-nav-elem active">
+              <div class="tab-nav-text">Вход</div>
+            </li>
+            <li class="tab-nav-elem">
+              <div class="tab-nav-text">Регистрация</div>
+            </li>
+          </ul>
+          <div class="tab-elem modal-login active">
+            <form class="modal-form" action="">
+              <input class="modal-input" type="text" placeholder="Email">
+              <input class="modal-input" type="password" placeholder="Пароль">
+              <div class="modal-form-wrap">
+                <div class="modal-form-remember">
+                  <p class="checkbox-wrap">
+                    <input class="checkbox" type="checkbox" id="modal-remember-checkbox">
+                    <label for="modal-remember-checkbox"></label>
+                  </p>
+                  <div class="modal-form-remember-text">Запомнить меня</div>
+                </div><a class="modal-form-link" href="">Забыли пароль?</a>
+              </div>
+              <button class="default-btn modal-form-btn">Войти</button>
+            </form>
+          </div>
+          <div class="tab-elem modal-registr">
+            <form class="modal-form" action="">
+              <input class="modal-input" type="text" placeholder="Имя">
+              <input class="modal-input" type="email" placeholder="Email">
+              <input class="modal-input" type="tel" placeholder="Телефон">
+              <input class="modal-input" type="password" placeholder="Пароль">
+              <input class="modal-input" type="password" placeholder="Повторите пароль">
+              <div class="modal-form-wrap">
+                <div class="modal-form-remember">
+                  <p class="checkbox-wrap">
+                    <input class="checkbox" type="checkbox" id="modal-agree-checkbox">
+                    <label for="modal-agree-checkbox"></label>
+                  </p>
+                  <div class="modal-form-remember-text">Я соглашаюсь с <a class="modal-form-link" href="">политикой обработки персональных данных</a></div>
+                </div>
+              </div>
+              <button class="default-btn modal-form-btn">Зарегистрироваться</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal modal-password" data-modal="password-modal">
+      <div class="modal-bg"></div>
+      <div class="modal-body">
+        <div class="modal-close"></div>
+        <div class="modal-big-heading">Востановление пароля</div>
+        <div class="modal-description">
+           Инструкции по смене пароля придут вам на почту 
+          в течение 5 минут
+        </div>
+        <form class="modal-form" action="">
+          <input class="modal-input" type="text" placeholder="Email">
+          <button class="default-btn modal-form-btn">Войти</button>
+        </form>
+      </div>
+    </div>
     <div class="modal modal-discussion" data-modal="discussion-modal">
       <div class="modal-bg"></div>
       <div class="modal-body">
@@ -36,9 +102,9 @@
         </div>
         <form class="modal-form" action="">
           <input class="modal-input" type="text" placeholder="Имя">
-          <input class="modal-input" type="text" placeholder="Телефон">
+          <input class="modal-input" type="tel" placeholder="Телефон">
           <div class="modal-form-delimer">Или</div>
-          <input class="modal-input" type="text" placeholder="Email">
+          <input class="modal-input" type="email" placeholder="Email">
           <button class="default-btn modal-form-btn">Отправить</button>
         </form>
       </div>
@@ -75,7 +141,7 @@
       <div class="modal-bg"></div>
       <div class="modal-body">
         <div class="modal-close"></div>
-        <div class="modal-faq-heading">Название вопроса</div>
+        <div class="modal-big-heading">Название вопроса</div>
         <p class="custom-text">
           Ретро-дизайн с современным кроем. Две раздвижные двери, три отделения с 
           полками. Яркие контрастные внутренние вставки окрашенные эмалью на 
@@ -99,7 +165,7 @@
         </p>
       </div>
     </div>
-    <div class="modal modal-quick">
+    <div class="modal modal-quick" data-modal="quick-modal">
       <div class="modal-bg"></div>
       <div class="modal-body">
         <div class="modal-close"></div>
@@ -110,12 +176,12 @@
         </div>
         <div class="modal-form">
           <input class="modal-input" type="text" placeholder="Имя">
-          <input class="modal-input" type="text" placeholder="Телефон">
+          <input class="modal-input" type="tel" placeholder="Телефон">
           <button class="default-btn modal-form-btn">Заказать</button>
         </div>
       </div>
     </div>
-    <div class="modal modal-order">
+    <div class="modal modal-order" data-modal="order-modal">
       <div class="modal-bg"></div>
       <div class="modal-body">
         <div class="modal-close"></div>
@@ -126,11 +192,11 @@
         </div><a class="default-btn modal-order-back-btn" href="">Вернуться к покупкам</a>
       </div>
     </div>
-    <div class="modal modal-terms">
+    <div class="modal modal-terms" data-modal="terms-modal">
       <div class="modal-bg"></div>
       <div class="modal-body">
         <div class="modal-close"></div>
-        <div class="modal-faq-heading">Условия работы</div>
+        <div class="modal-big-heading">Условия работы</div>
         <p class="custom-text">
           Ретро-дизайн с современным кроем. Две раздвижные двери, три отделения с 
           полками. Яркие контрастные внутренние вставки окрашенные эмалью на 
@@ -153,6 +219,40 @@
           фоне натуральной древесины придают ему особый вид.
         </p><a class="default-btn modal-terms-back-btn" href="">Вернуться к покупкам</a>
       </div>
+    </div>
+    <div class="modal modal-3d" data-modal="3d-modal">
+      <div class="modal-bg"></div>
+      <div class="modal-body">
+        <div class="modal-close"></div>
+        <div class="modal-heading">Сохранить модель?</div>
+        <div class="modal-description">
+          Модель будет сохранена в вашем кабинете в 
+          списке сохранненных моделей.
+        </div>
+        <div class="modal-wrap-buttons">
+          <div class="default-btn modal-wrap-btn">Да</div>
+          <div class="default-btn btn-inv modal-wrap-btn">Нет</div>
+        </div>
+      </div>
+    </div>
+    <div class="mobile-menu">
+      <nav class="mobile-menu-nav">
+        <ul class="mobile-menu-nav-list">
+          <li><a class="header-nav-link" href=""> <span class="header-nav-link-text">Каталог</span></a></li>
+          <li><a class="header-nav-link" href=""> <span class="header-nav-link-text">Коллекции</span></a></li>
+          <li><a class="header-nav-link" href=""> <span class="header-nav-link-text">Индивидуальные заказы</span></a></li>
+          <li>
+            <div class="header-nav-link mobile-menu-nav-about"> <span class="header-nav-link-text">О нас
+                <div class="mobile-menu-nav-link-arrow"></div></span>
+              <div class="mobile-menu-nav-submenu"><a class="mobile-menu-nav-submenu-link" href="">О нас</a><a class="mobile-menu-nav-submenu-link" href="">Видео о нас</a><a class="mobile-menu-nav-submenu-link" href="">Фото шоурума</a><a class="mobile-menu-nav-submenu-link" href="">Видео шоурума</a><a class="mobile-menu-nav-submenu-link" href="">Портфолио</a></div>
+            </div>
+          </li>
+          <li><a class="header-nav-link" href=""> <span class="header-nav-link-text">Как выбрать мебель</span></a></li>
+          <li><a class="header-nav-link" href=""> <span class="header-nav-link-text">Сотрудничество</span></a></li>
+          <li><a class="header-nav-link" href=""> <span class="header-nav-link-text">Доставка и оплата</span></a></li>
+          <li><a class="header-nav-link" href=""> <span class="header-nav-link-text">Контакты</span></a></li>
+        </ul>
+      </nav>
     </div>
     <header class="header header-absolute">
       <div class="header-wrap">
@@ -224,7 +324,7 @@
       <div class="header-slider-elem"><img class="header-slider-img" src="style/img/main-slider-img-2.jpg" alt=""></div>
     </div>
     <div class="wrapper-box">
-      <div class="wrapper">
+      <div class="wrapper media-page"> 
         <div class="wrapper-header">Коллекции</div>
         <div class="media"> <a class="media-elem" href="">
             <div class="media-img-box"><img class="media-img" src="style/img/catalog/catalog-img-1.jpg" alt=""></div>

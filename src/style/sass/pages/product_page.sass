@@ -81,38 +81,6 @@
 					width: 100%
 
 	&-tab
-		margin:
-			top: 60px
-
-		&-nav
-			+flex
-			margin:
-				bottom: 15px
-			list-style-type: none
-
-			&-elem
-				display: inline-block
-				padding: 12px 40px 6px 40px
-				font-size: 22px
-				color: $font-light-color
-				text-transform: uppercase
-				background-color: #F4F4F4
-				+prefix(transition, $default-transition)
-				cursor: pointer
-
-				&:hover
-					color: $accent-dark-color
-
-				&.active
-					color: $accent-dark-color
-					background-color: transparent
-					cursor: default
-
-		&-elem
-			display: none
-
-			&.active
-				display: block
 
 		&-description
 			p
@@ -273,7 +241,7 @@
 			.slick-arrow 
 				position: absolute
 				margin:
-					top: -12px
+					top: -36px
 				top: 50%
 				width: 12px
 				height: 24px
@@ -301,12 +269,21 @@
 		&-elem
 			margin: 0 15px
 			max-width: 210px
+			outline: none
+			
+			&:hover
+				.product-other-img
+					+prefix(transform, scale(1.05))
+
+				.product-other-name 
+					text-decoration: underline	
 			
 		&-img-box 
 			position: relative
 			padding:
 				bottom: 100%
 			width: 100%
+			overflow: hidden
 
 		&-img
 			display: block
@@ -321,6 +298,7 @@
 			height: 100%
 			max-height: 100%
 			object-position: center
+			+prefix(transition, $default-transition)
 		
 		&-info
 			margin:

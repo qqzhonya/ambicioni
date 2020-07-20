@@ -1,3 +1,57 @@
+.modal.modal-log(data-modal="log-modal")
+	.modal-bg
+	.modal-body
+		.modal-close
+		.tab
+			ul.tab-nav
+				li.tab-nav-elem.active
+					.tab-nav-text Вход
+				li.tab-nav-elem
+					.tab-nav-text Регистрация
+
+			.tab-elem.modal-login.active
+				form(action="").modal-form
+					input(type="text" placeholder="Email").modal-input
+					input(type="password" placeholder="Пароль").modal-input
+					.modal-form-wrap
+						.modal-form-remember
+							p.checkbox-wrap
+								input(type="checkbox" id="modal-remember-checkbox").checkbox
+								label(for="modal-remember-checkbox")
+							.modal-form-remember-text
+								| Запомнить меня
+						a(href="").modal-form-link Забыли пароль?
+					button.default-btn.modal-form-btn Войти
+
+			.tab-elem.modal-registr
+				form(action="").modal-form
+					input(type="text" placeholder="Имя").modal-input
+					input(type="email" placeholder="Email").modal-input
+					input(type="tel" placeholder="Телефон").modal-input
+					input(type="password" placeholder="Пароль").modal-input
+					input(type="password" placeholder="Повторите пароль").modal-input
+					.modal-form-wrap
+						.modal-form-remember
+							p.checkbox-wrap
+								input(type="checkbox" id="modal-agree-checkbox").checkbox
+								label(for="modal-agree-checkbox")
+							.modal-form-remember-text
+								| Я соглашаюсь с 
+								a(href="").modal-form-link политикой обработки персональных данных
+					button.default-btn.modal-form-btn Зарегистрироваться
+
+.modal.modal-password(data-modal="password-modal")
+	.modal-bg
+	.modal-body
+		.modal-close
+		.modal-big-heading Востановление пароля
+		.modal-description 
+			| Инструкции по смене пароля придут вам на почту 
+			| в течение 5 минут
+		form(action="").modal-form
+			input(type="text" placeholder="Email").modal-input
+			button.default-btn.modal-form-btn Войти
+		
 .modal.modal-discussion(data-modal="discussion-modal")
 	.modal-bg
 	.modal-body
@@ -11,9 +65,9 @@
 				.modal-discussion-info-name Обувной шкаф Contorno
 		form(action="").modal-form
 			input(type="text" placeholder="Имя").modal-input
-			input(type="text" placeholder="Телефон").modal-input
+			input(type="tel" placeholder="Телефон").modal-input
 			.modal-form-delimer Или
-			input(type="text" placeholder="Email").modal-input
+			input(type="email" placeholder="Email").modal-input
 			button.default-btn.modal-form-btn Отправить
 
 .modal.modal-product(data-modal="product-modal")
@@ -60,7 +114,7 @@
 	.modal-bg
 	.modal-body
 		.modal-close
-		.modal-faq-heading Название вопроса
+		.modal-big-heading Название вопроса
 		p.custom-text
 			| Ретро-дизайн с современным кроем. Две раздвижные двери, три отделения с 
 			| полками. Яркие контрастные внутренние вставки окрашенные эмалью на 
@@ -79,7 +133,7 @@
 			| полками. Яркие контрастные внутренние вставки окрашенные эмалью на 
 			| фоне натуральной древесины придают ему особый вид.
 
-.modal.modal-quick
+.modal.modal-quick(data-modal="quick-modal")
 	.modal-bg
 	.modal-body
 		.modal-close
@@ -89,10 +143,10 @@
 			| Вами свяжемся для уточнения всех деталей.
 		.modal-form
 			input(type="text" placeholder="Имя").modal-input
-			input(type="text" placeholder="Телефон").modal-input
+			input(type="tel" placeholder="Телефон").modal-input
 			button.default-btn.modal-form-btn Заказать
 
-.modal.modal-order
+.modal.modal-order(data-modal="order-modal")
 	.modal-bg
 	.modal-body
 		.modal-close
@@ -102,11 +156,11 @@
 			| на почту в течение 5 минут!
 		a(href="").default-btn.modal-order-back-btn Вернуться к покупкам
 
-.modal.modal-terms
+.modal.modal-terms(data-modal="terms-modal")
 	.modal-bg
 	.modal-body
 		.modal-close
-		.modal-faq-heading Условия работы
+		.modal-big-heading Условия работы
 		p.custom-text
 			| Ретро-дизайн с современным кроем. Две раздвижные двери, три отделения с 
 			| полками. Яркие контрастные внутренние вставки окрашенные эмалью на 
@@ -126,3 +180,50 @@
 			| фоне натуральной древесины придают ему особый вид.
 		
 		a(href="").default-btn.modal-terms-back-btn Вернуться к покупкам
+
+.modal.modal-3d(data-modal="3d-modal")
+	.modal-bg
+	.modal-body
+		.modal-close
+		.modal-heading Сохранить модель?
+		.modal-description
+			| Модель будет сохранена в вашем кабинете в 
+			| списке сохранненных моделей.
+		.modal-wrap-buttons
+			.default-btn.modal-wrap-btn Да
+			.default-btn.btn-inv.modal-wrap-btn Нет
+
+.mobile-menu
+	nav.mobile-menu-nav
+		ul.mobile-menu-nav-list
+			li
+				a(href="").header-nav-link 
+					span.header-nav-link-text Каталог
+			li
+				a(href="").header-nav-link 
+					span.header-nav-link-text Коллекции
+			li
+				a(href="").header-nav-link 
+					span.header-nav-link-text Индивидуальные заказы
+			li
+				.header-nav-link.mobile-menu-nav-about 
+					span.header-nav-link-text О нас
+						.mobile-menu-nav-link-arrow
+					.mobile-menu-nav-submenu
+						a(href="").mobile-menu-nav-submenu-link О нас
+						a(href="").mobile-menu-nav-submenu-link Видео о нас
+						a(href="").mobile-menu-nav-submenu-link Фото шоурума
+						a(href="").mobile-menu-nav-submenu-link Видео шоурума
+						a(href="").mobile-menu-nav-submenu-link Портфолио
+			li
+				a(href="").header-nav-link 
+					span.header-nav-link-text Как выбрать мебель
+			li
+				a(href="").header-nav-link 
+					span.header-nav-link-text Сотрудничество
+			li
+				a(href="").header-nav-link 
+					span.header-nav-link-text Доставка и оплата
+			li
+				a(href="").header-nav-link 
+					span.header-nav-link-text Контакты
