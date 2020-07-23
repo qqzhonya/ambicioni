@@ -15,7 +15,7 @@ html, body {
 html {
   height: 100%;
   scroll-behavior: smooth;
-  zoom: .87; }
+  zoom: .83; }
 
 body {
   position: relative;
@@ -618,7 +618,7 @@ a {
   flex-wrap: wrap; }
   .media-elem {
     display: block;
-    margin-top: 60px;
+    margin-top: 42px;
     padding: 0 15px;
     width: 33.33%;
     text-align: center;
@@ -670,8 +670,7 @@ a {
     white-space: nowrap;
     overflow: hidden; }
   .media-price {
-    margin-top: 7px;
-    font-size: 14px;
+    font-size: 16px;
     color: #191917; }
 
 .show-more {
@@ -834,7 +833,7 @@ a {
       display: -ms-flexbox;
       display: flex;
       margin-bottom: 12px;
-      font-size: 16px;
+      font-size: 18px;
       -webkit-box-pack: justify;
       -ms-flex-pack: justify;
       -webkit-justify-content: space-between;
@@ -1002,6 +1001,7 @@ a {
   transform: scale(1); }
 
 .contact-map-wrap {
+  display: inherit;
   margin-top: 30px;
   width: 100%; }
 
@@ -1908,6 +1908,10 @@ a {
       border-color: #191917; }
     .header.header-absolute.header-inverse .header-nav-link {
       color: #191917; }
+    .header.header-absolute.header-inverse .header-menu-btn span,
+    .header.header-absolute.header-inverse .header-menu-btn span:before,
+    .header.header-absolute.header-inverse .header-menu-btn span:after {
+      background-color: #191917; }
 
 .footer {
   display: block;
@@ -1981,7 +1985,7 @@ a {
     .footer-list li {
       margin-bottom: 4px; }
   .footer-link {
-    font-size: 13px;
+    font-size: 15px;
     line-height: 16px;
     color: #191917; }
     .footer-link:hover {
