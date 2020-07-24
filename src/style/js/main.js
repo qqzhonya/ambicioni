@@ -134,7 +134,23 @@ $(function() {
 		dots: false,
 		arrows: false,
 		centerMode: false,
-		focusOnSelect: true
+		focusOnSelect: true,
+		responsive: [
+			{
+				breakpoint: 961,
+				settings: {
+					slidesToShow: 6,
+					slidesToScroll: 1,
+				}
+			},
+			{
+				breakpoint: 421,
+				settings: {
+					slidesToShow: 4,
+					slidesToScroll: 1,
+				}
+			}
+		]
 	});
 
 	//
@@ -208,6 +224,22 @@ $(function() {
 		dots: false,
 		arrows: true,
 		infinite: false,
+		responsive: [
+			{
+				breakpoint: 720,
+				settings: {
+					slidesToShow: 4,
+					slidesToScroll: 1,
+				}
+			},
+			{
+				breakpoint: 420,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 1,
+				}
+			},
+		]
 	});
 
 	//
@@ -313,7 +345,7 @@ $(function() {
 	
 	$('.cart-comment-btn').click(function() {
 		$(this).hide();
-		$('.cart-comment-form').show();
+		$(this).parent().find('.cart-comment-form').show();
 	});
 
 	$('.cart-comment-form-close').click(function() {

@@ -4,7 +4,12 @@ include ../var/top_line.pug
 	.wrapper
 		.product-wrap
 			.product-elem
-
+				.product-heading
+					.product-heading-text Обувной шкаф Contorno
+					.product-heading-vendor
+						span Артикул: 
+						span.product-vendro-value 77621/7 
+				
 				.product-slider
 					.product-slider-elem.modal-btn(data-modal-btn="product-modal")
 						img(src="style/img/product-img-1.jpg", alt="").product-slider-img
@@ -77,14 +82,14 @@ include ../var/top_line.pug
 							video(width="100" controls).video#video
 								source(src="style/img/postmalone.mp4")
 
-			.product-elem
+			.product-elem.product-elem-info
 				.product-name Обувной шкаф Contorno
 				
 				.product-vendor 
 					span Артикул: 
 					span.product-vendro-value 77621/7 
 				
-				form.product-form
+				form.product-select-box
 					.product-select-wrap
 						label(for="#select-size").product-select-label Размер:
 						select(name="product-size").custom-select#select-size
@@ -113,7 +118,7 @@ include ../var/top_line.pug
 				
 				.default-btn.btn-inv.product-discussion-btn.modal-btn(data-modal-btn="discussion-modal") Обсудить изделие
 
-				.product-info
+				.product-info.product-size
 					.product-info-title Размеры и габариты
 					.product-info-item
 						.product-info-elem.product-info-name Ширина
@@ -125,7 +130,7 @@ include ../var/top_line.pug
 						.product-info-elem.product-info-name Глубина
 						.product-info-elem.product-info-value 87.5 см
 				
-				.product-info
+				.product-info.product-spec
 					.product-info-title Характеристики
 					.product-info-item
 						.product-info-elem.product-info-name Материал корпуса
@@ -137,7 +142,7 @@ include ../var/top_line.pug
 						.product-info-elem.product-info-name Материал ручек
 						.product-info-elem.product-info-value Шпон ценных пород
 
-				.product-info
+				.product-info.product-faq
 					.product-info-title ВОПРОСЫ И ОТВЕТЫ
 					.product-faq-btn.modal-btn(data-modal-btn="faq-modal") Где посмотреть товары?
 					.product-faq-btn.modal-btn(data-modal-btn="faq-modal") Сколько стоит доставка?

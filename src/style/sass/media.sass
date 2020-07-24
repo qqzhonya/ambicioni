@@ -1,4 +1,14 @@
-@media screen and (max-width: 1030px)
+@media screen and (max-width: 1050px)
+	.product
+		&-other
+			&-slider
+				.slick-prev
+					left: 20px
+			
+				.slick-next
+					right: 20px
+
+@media screen and (max-width: 991px)
 	.header 
 		&-bottom
 			display: none
@@ -34,20 +44,449 @@
 				top: 40px
 			+justify-content(center)
 
+	.video-wrap,
+	.main-category
+		margin:
+			top: 60px
+	
+	.main-category-wrap
+		margin:
+			bottom: 50px
+
 @media screen and (max-width: 961px)
+	.header
+		&-search
+			&-input
+				min-width: 150px
+				max-width: 150px
+
 	.wrapper 
 		&-header
 			margin:
 				top: 60px
 				bottom: 30px
 	
+	.product
+		&-buy
+			+flex-flow(column)
+
+			&-price
+				margin: 0
+			
+			&-btn
+				margin:
+					top: 10px
+
 	.footer
-		&-wrap
+		&-bottom
 			+flex-wrap(wrap)
 
+			.footer-elem
+				margin:
+					top: 10px
+				padding:
+					right: 0
+
 @media screen and (max-width: 761px)
+	.header
+		&-wrap
+			padding: 15px
+		
+		&-top
+			height: 72px
+
+		&-logo
+			max-width: 120px
+
+			img
+				width: 100%
+
+	.mobile-menu
+		top: 102px
+
 	.media
 		margin:
 			top: 0
 		&-elem
 			width: 50%
+	
+	.product
+		&-wrap
+			+flex-wrap(wrap)
+		
+		&-elem:first-child,
+		&-elem:last-child
+			margin: 0
+			width: 100%
+
+		&-elem-info
+			+flex
+			+flex-flow(column)
+
+		&-heading
+			display: block
+
+		&-slider
+			margin: 0 auto
+				top: 20px
+
+		&-name,
+		&-vendor
+			display: none
+		
+		&-select
+			&-wrap
+				+justify-content(center)
+
+		&-size
+			order: 1
+		
+		&-spec
+			order: 2
+		
+		&-select-box
+			order: 3
+		
+		&-link
+			margin: 0 auto
+				top: 15px
+			max-width: 385px
+			order: 4
+
+		&-discussion-btn
+			margin: 0 auto
+				top: 30px
+			max-width: 270px
+			order: 5
+		
+		&-buy
+			order: 6
+		
+		&-faq
+			order: 7
+
+		&-other
+			margin:
+				top: 45px
+
+			&-title
+				margin:
+					bottom: 25px
+				font-size: 24px
+			
+			&-btn
+				margin:
+					top: 30px
+				font-size: 18px
+
+	.cart
+
+		&-product
+			&-wrap
+				margin: 0
+					left: 30px
+
+		&-top
+			+justify-content(flex-start)
+			+flex-wrap(wrap)
+
+		&-info
+			margin:
+				bottom: 20px
+			width: 90%
+		
+		&-price
+			margin:
+				left: 20px
+
+		&-delete
+			position: absolute
+			top: 0
+			right: 0
+
+		&-comment
+			&-form
+				&-bottom
+					margin: 0
+		
+		&-menu
+			+flex-flow(column)
+
+			&-order
+				margin: 0 auto
+					top: 20px
+				+flex-wrap(wrap)
+				+justify-content(center)
+
+				&-price
+					margin: 0
+
+	.feedback
+		&-info-wrap
+			padding:
+				left: 30px
+	
+	.main-form
+		padding: 30px 15px
+
+	.footer
+		&-wrap
+			+flex-wrap(wrap)
+		
+		&-left
+			margin: 0 auto
+				bottom: 20px
+		
+		&-top
+			+justify-content(center)
+			+flex-wrap(wrap)
+			
+			.footer-elem
+				margin:
+					right: 0
+					top: 20px
+				padding:
+					right: 10px
+				width: 50%
+				text-align: center
+
+@media screen and (max-width: 661px)
+	.header
+		&-number
+			display: none	
+
+		&-logo
+			position: relative
+			top: auto
+			left: auto
+			+prefix(transform, translate(0))
+	
+	.mobile-menu
+		&-number
+			display: block
+
+@media screen and (max-width: 641px)
+	.main-category
+		
+		&-wrap
+			position: relative
+			margin:
+				bottom: 30px
+
+		&-img-box
+			padding:
+				bottom: 45%
+			width: 100%
+			max-width: 100%
+
+		&-img
+			object-fit: cover
+		
+		&-text
+			position: absolute
+			margin: 0
+			padding: 30px 15px
+			bottom: 0
+			left: 0
+			width: 100%
+			color: $white
+			background-color: rgba(0,0,0, .4)
+
+	.catalog
+		&-elem
+			width: 100%
+
+	.main-collection
+		margin:
+			top: 40px
+
+		.catalog-elem:nth-last-child(-n+2)
+			display: none
+
+	.feedback
+		+flex-flow(column)
+
+		&-form-wrap,
+		&-info-wrap
+			width: 100%
+		
+		&-info-wrap
+			padding: 0
+
+		&-info
+			margin: 0 auto
+				top: 40px
+		
+		.order-btn
+			margin: 0 auto
+				top: 30px
+	
+	.main-form
+		max-width: 100%
+
+@media screen and (max-width: 600px)
+	.inst
+		padding: 30px 15px
+
+		&-wrap
+			+flex-wrap(wrap)
+			+justify-content(center)
+		
+		&-list
+			margin: 0
+				top: 40px
+	
+	.about
+		&-media
+			&-elem
+				width: 33.33%
+
+@media screen and (max-width: 520px)
+	.product
+		&-slider
+			&-elem
+				max-height: 400px
+
+			&-img
+				width: 100%
+				height: auto
+				object-fit: contain
+				object-position: bottom center
+
+@media screen and (max-width: 500px)
+	.cart
+		&-product
+			+flex-wrap(wrap)
+			+justify-content(center)
+		
+			&-wrap
+				margin:
+					top: 20px
+					left: 0
+				max-width: 300px
+
+		&-img-box
+			max-width: 300px
+			min-height: 300px
+			max-height: 300px
+
+		&-bottom
+			margin:
+				top: 20px
+		
+		&-menu
+			margin:
+				top: 40px
+	
+	.about
+		&-media
+			&-elem
+				width: 50%
+
+@media screen and (max-width: 475px)
+	.wrapper
+		margin:
+			bottom: 50px
+
+	.price
+		&-filter
+			&-title
+				margin:
+					right: 20px
+			
+			&-input
+				max-width: 150px
+	
+	.tab
+		&-nav
+			&-elem
+				padding:
+					left: 20px
+					right: 20px
+				font-size: 18px
+
+@media screen and (max-width: 420px)
+	.video
+		&-text
+			font-size: 34px
+
+		&-play-btn
+			margin:
+				top: 15px
+			width: 42px
+			height: 42px
+	
+	.media
+		&-elem
+			width: 100%
+		
+		&-img-box
+			padding:
+				bottom: 70%
+	
+	.product
+		&-heading
+			&-text
+				font-size: 24px
+			
+			&-vendor
+				font-size: 16px
+		
+		&-link
+			font-size: 18px
+
+		&-other
+			&-elem
+				max-width: 100%
+
+	.cart
+		&-empty
+			text-align: center
+
+	.main-form
+		&-title
+			text-align: center
+
+		&-elem
+			+flex-wrap(wrap)
+
+		&-label
+			margin: 0
+		
+		&-input
+			margin:
+				top: 10px
+
+	.contact-map
+		height: 250px
+
+@media screen and (max-width: 350px)
+	.price
+		&-filter
+			&-input-wrap
+				+flex-flow(column)
+
+			&-label
+				margin: 0 auto
+					top: 10px
+				width: 100%
+				max-width: 315px
+
+				&:last-child
+					margin: 0 auto
+						top: 10px
+
+			&-input
+				width: 100%
+				max-width: 100%
+	
+	.about
+		&-media
+			margin: 0
+			&-elem
+				padding: 10px 0
+				width: 100%
+
+			
+
+				

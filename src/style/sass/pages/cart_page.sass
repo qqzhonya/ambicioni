@@ -12,6 +12,7 @@
 
 	&-top
 		+flex
+		position: relative
 		+justify-content(space-between)
 		+align-items(center)
 
@@ -20,7 +21,9 @@
 		padding:
 			bottom: 23.1%
 		width: 100%
-		max-width: 270px 
+		max-width: 270px
+		min-height: 270px 
+		max-height: 270px
 	
 	&-img
 		display: block
@@ -85,7 +88,7 @@
 		width: 20px
 		height: 20px
 		background-image: url(../img/icon/cross-icon.svg)
-		background-siz: cover
+		background-size: cover
 		background-position: center center
 		background-repeat: no-repeat
 	
