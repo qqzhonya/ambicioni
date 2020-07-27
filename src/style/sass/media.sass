@@ -7,6 +7,37 @@
 			
 				.slick-next
 					right: 20px
+	
+	.modal-product
+		.modal-body
+			padding: 50px
+			max-width: 800px
+		
+		&-slider
+			&-wrap
+				display: block
+			
+			&-nav
+				margin: 0
+					top: 30px
+				max-width: 100%
+
+				.slick-list
+					margin: 0 -6px
+				
+				.slick-track
+					+flex
+					width: auto
+
+				.slick-slide
+					margin: 0 6px
+					border: 1px solid transparent
+					border-radius: 0
+					+prefix(transition, $default-transition)
+					outline: none
+
+					&.slick-current.slick-active
+						border: 1px solid $accent-dark-color
 
 @media screen and (max-width: 991px)
 	.header 
@@ -52,6 +83,9 @@
 	.main-category-wrap
 		margin:
 			bottom: 50px
+
+	.modal-cart
+		top: 138px
 
 @media screen and (max-width: 961px)
 	.header
@@ -100,6 +134,9 @@
 
 			img
 				width: 100%
+
+	.modal-cart
+		top: 102px
 
 	.mobile-menu
 		top: 102px
@@ -229,6 +266,27 @@
 	.main-form
 		padding: 30px 15px
 
+	.cooperation
+		&-wrap
+			margin:
+				top: 40px
+			+flex-wrap(wrap)
+
+		&-img-wrap,
+		&-info
+			width: 100%
+
+		&-info
+			margin:
+				top: 40px
+			padding:
+				left: 0px
+		
+		&-form
+			margin:
+				top: 40px
+			padding: 30px 15px 40px 15px
+
 	.footer
 		&-wrap
 			+flex-wrap(wrap)
@@ -353,6 +411,10 @@
 				object-fit: contain
 				object-position: bottom center
 
+	.modal-product
+		.modal-body
+			padding: 50px 15px 15px 15px
+
 @media screen and (max-width: 500px)
 	.cart
 		&-product
@@ -383,6 +445,18 @@
 			&-elem
 				width: 50%
 
+	.cooperation
+		&-form
+			&-wrap
+				margin: 0 auto
+					top: 20px
+				+flex-flow(column)
+			
+			&-elem
+				padding: 0
+					top: 15px
+				width: 100%
+
 @media screen and (max-width: 475px)
 	.wrapper
 		margin:
@@ -406,6 +480,35 @@
 				font-size: 18px
 
 @media screen and (max-width: 420px)
+	.modal
+		padding: 70px 15px
+
+		&-body
+			padding: 30px 15px
+				top: 50px
+		
+		&-terms-back-btn
+			max-width: 100%
+
+	.header.search-open
+		.header-logo,
+		.header-menu-btn,
+		.header-cart
+			display: none
+		
+		.header-buttons
+			width: 100%
+		
+		.header-search
+			width: 100%
+
+			&-form
+				width: 100%
+
+			&-input 
+				width: 100%
+				max-width: 100%
+
 	.video
 		&-text
 			font-size: 34px
@@ -459,6 +562,73 @@
 
 	.contact-map
 		height: 250px
+
+	.order-list
+		&-elem
+			padding: 12px 0
+
+		&-heading
+			&-value,
+			&-num,
+			&-price
+				font-size: 24px
+				line-height: 24px
+
+			&-num
+				margin:
+					left: 10px
+					right: 5px
+			
+			&-arrow
+				margin:
+					left: 5px
+				width: 12px
+				height: 7px
+		
+		&-info
+			padding: 0
+		
+			&-elem
+				padding:
+					top: 10px
+					bottom: 10px
+
+				&:first-child
+					margin:
+						top: 15px
+
+		&-value
+			margin:
+				bottom: 0
+			padding: 30px 15px
+	
+	.links
+
+		&-wrap
+			padding:
+				top: 50px
+				bottom: 50px
+			+flex-wrap(wrap)
+
+		&-btn
+			&:last-child
+				margin:
+					top: 20px
+
+	.modal-cart
+		&-wrap
+			padding: 50px 15px 35px 15px
+
+		&-delete
+			right: 0
+		
+		&-img-box
+			margin:
+				right: 15px
+
+		&-all-price
+			margin: 0 -15px
+				top: 35px
 
 @media screen and (max-width: 350px)
 	.price
