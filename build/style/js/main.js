@@ -125,33 +125,25 @@ $(function() {
 	// Product slider
 	//
 
-	var slideCount = $('.product-slider').find(".product-slider-elem").length;
-	if (slideCount <= 9 ) {
-		// clone element
-		for(var i=slideCount; i < 8; i++) {
-			$(".product-slider").children().clone(true, true).appendTo(".product-slider");
-			$(".product-slider-nav").children().clone(true, true).appendTo(".product-slider-nav");
-		}
-	};
-
-
 	$('.product-slider').not('.slick-initialized').slick({
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		arrows: true,
 		dots: false,
 		fade: true,
+		infinite: false,
 		asNavFor: '.product-slider-nav'
 	});
 
 	$('.product-slider-nav').slick({
 		slidesToShow: 8,
-		slidesToScroll: 1,
+		slidesToScroll: 8,
 		asNavFor: '.product-slider',
 		dots: false,
 		arrows: false,
 		centerMode: false,
 		focusOnSelect: true,
+		infinite: false,
 		responsive: [
 			{
 				breakpoint: 961,
@@ -221,10 +213,10 @@ $(function() {
 	// Tab 
 	//
 
-	$('ul.tab-nav').on('click', 'li:not(.active)', function() {
+	$('ul.p-profile__tab-nav').on('click', 'li:not(.active)', function() {
     $(this)
       .addClass('active').siblings().removeClass('active')
-      .closest('div.tab').find('div.tab-elem').removeClass('active').eq($(this).index()).addClass('active');
+      .closest('div.p-profile__tabs').find('div.p-profile__tab-elem').removeClass('active').eq($(this).index()).addClass('active');
   });
 
 	//
@@ -268,14 +260,6 @@ $(function() {
 	//
 
 	function modalProduct() {
-		var slideCount = $('.modal-product-slider').find(".modal-product-slider-elem").length;
-		if (slideCount <= 9 ) {
-			// clone element
-			for(var i=slideCount; i < 8; i++) {
-				$(".modal-product-slider").children().clone(true, true).appendTo(".modal-product-slider");
-				$(".modal-product-slider-nav").children().clone(true, true).appendTo(".modal-product-slider-nav");
-			}
-		};
 
 		$('.modal-product-slider').slick({
 			slidesToShow: 1,
@@ -283,12 +267,13 @@ $(function() {
 			arrows: true,
 			dots: false,
 			fade: true,
+			infinite: false,
 			asNavFor: '.modal-product-slider-nav'
 		});
 	
 		$('.modal-product-slider-nav').slick({
 			slidesToShow: 4,
-			slidesToScroll: 1,
+			slidesToScroll: 4,
 			asNavFor: '.modal-product-slider',
 			dots: false,
 			arrows: false,
@@ -296,6 +281,7 @@ $(function() {
 			focusOnSelect: true,
 			vertical: true,
 			verticalSwiping: true,
+			infinite: false,
 			responsive: [
 				{
 					breakpoint: 1050,

@@ -69,7 +69,9 @@
 			.modal-form-delimer Или
 			input(type="email" placeholder="Email").modal-input
 			button.default-btn.modal-form-btn Отправить
-
+		.modal-discussion-success-text
+			| Сообщение успешно отправлено
+			
 .modal.modal-product(data-modal="product-modal")
 	.modal-bg
 	.modal-body
@@ -82,8 +84,20 @@
 				.modal-product-slider-elem
 					.modal-product-slider-img-box
 						img(src="style/img/collection/collection-img-1.jpg", alt="").modal-product-slider-img
+				.modal-product-slider-elem
+					.modal-product-slider-img-box
+						img(src="style/img/product-img-1.jpg", alt="").modal-product-slider-img
+				.modal-product-slider-elem
+					.modal-product-slider-img-box
+						img(src="style/img/collection/collection-img-1.jpg", alt="").modal-product-slider-img
 
 			.modal-product-slider-nav
+				.modal-product-slider-nav-elem
+					.modal-product-slider-nav-img-box
+						img(src="style/img/product-img-1.jpg", alt="").modal-product-slider-nav-img
+				.modal-product-slider-nav-elem
+					.modal-product-slider-nav-img-box
+						img(src="style/img/product-img-1.jpg", alt="").modal-product-slider-nav-img
 				.modal-product-slider-nav-elem
 					.modal-product-slider-nav-img-box
 						img(src="style/img/product-img-1.jpg", alt="").modal-product-slider-nav-img
@@ -173,6 +187,13 @@
 		.modal-wrap-buttons
 			.default-btn.modal-wrap-btn Да
 			.default-btn.btn-inv.modal-wrap-btn Нет
+
+.modal.modal-success
+	.modal-bg
+	.modal-body
+		.modal-close 
+		.modal-description
+			| Ваша заявка успешно отправлена
 
 .mobile-menu
 	nav.mobile-menu-nav
